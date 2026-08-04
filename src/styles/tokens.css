@@ -1,0 +1,60 @@
+:root {
+  /* Colors */
+  --color-bg: #0d0e10;
+  --color-bg-deep: #090a0b;
+  --color-surface: #141619;
+
+  --color-text-primary: #f1efe9;
+  --color-text-secondary: #a3a29d;
+  --color-text-muted: #747570;
+
+  --color-border: rgb(241 239 233 / 12%);
+  --color-border-strong: rgb(241 239 233 / 22%);
+
+  --color-accent: #8ca5ff;
+
+  /* Typography */
+  --font-sans: "Instrument Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.5rem;
+  --text-xl: clamp(2rem, 4vw, 4rem);
+  --text-display: clamp(3rem, 8vw, 7.5rem);
+
+  --leading-tight: 0.95;
+  --leading-heading: 1.05;
+  --leading-body: 1.6;
+
+  /* Layout */
+  --page-width: 90rem;
+  --text-width: 42rem;
+  --page-gutter: clamp(1.25rem, 4vw, 4.5rem);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Shape */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+
+  /* Motion */
+  --duration-fast: 160ms;
+  --duration-medium: 320ms;
+  --duration-slow: 600ms;
+
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+}

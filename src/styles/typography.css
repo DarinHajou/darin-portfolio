@@ -1,0 +1,28 @@
+.heading-display {
+  font-size: var(--text-display);
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.055em;
+}
+
+.heading-section {
+  font-size: var(--text-xl);
+  font-weight: 500;
+  line-height: var(--leading-heading);
+  letter-spacing: -0.04em;
+}
+
+.body-large {
+  max-width: var(--text-width);
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
