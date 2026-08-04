@@ -2,23 +2,19 @@ import './App.css'
 
 import Navigation from "./components/Navigation/Navigation";
 
+import Hero from "./sections/Hero/Hero";
+
 function App() {
   return (
     <>
       <Navigation />
 
       <main id="top">
-        <section className="page-container page-section">
-          <p className="label">Portfolio · 2026</p>
-
-          <h1 className="heading-display">
-            Product-minded frontend developer with hands-on full-stack
-            experience.
-          </h1>
-        </section>
+        <Hero />
 
         <section id="work" className="page-container page-section">
-          <h2 className="heading-section">Selected work</h2>
+          <p className="label">Selected work</p>
+          <h2 className="heading-section">Projects</h2>
         </section>
 
         <section id="about" className="page-container page-section">
@@ -33,4 +29,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
