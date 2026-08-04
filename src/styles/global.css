@@ -63,3 +63,21 @@ p {
   background: var(--color-accent);
   color: var(--color-bg);
 }
+
+.page-container {
+  width: min(
+    calc(100% - (var(--page-gutter) * 2)),
+    var(--page-width)
+  );
+  margin-inline: auto;
+}
+
+.page-section {
+  padding-block: var(--space-24);
+}
+
+@media (min-width: 768px) {
+  .page-section {
+    padding-block: var(--space-32);
+  }
+}
