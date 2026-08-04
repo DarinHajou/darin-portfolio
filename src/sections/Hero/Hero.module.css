@@ -103,35 +103,6 @@
   border-radius: var(--radius-md);
 }
 
-.previewHeader {
-  display: flex;
-  justify-content: space-between;
-
-  padding: var(--space-4) var(--space-6);
-
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-
-  border-bottom: 1px solid var(--color-border);
-}
-
-.previewBody {
-  display: grid;
-  place-items: center;
-
-  min-height: 15rem;
-  padding: var(--space-8);
-
-  color: var(--color-text-muted);
-}
-
-.previewBody p {
-  font-size: var(--text-sm);
-}
-
 @media (min-width: 768px) {
   .hero {
     min-height: calc(100svh - 5.5rem);
@@ -155,10 +126,6 @@
   .preview {
     grid-column: 7 / -1;
     min-height: 22rem;
-  }
-
-  .previewBody {
-    min-height: 19rem;
   }
 
   .actions {

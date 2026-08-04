@@ -1,4 +1,5 @@
 import styles from "./Hero.module.css";
+import ProjectMedia from "../../components/ProjectMedia/ProjectMedia";
 
 function Hero() {
   return (
@@ -37,16 +38,13 @@ function Hero() {
           </div>
         </div>
 
-        <div className={styles.preview} aria-label="Project preview placeholder">
-          <div className={styles.previewHeader}>
-            <span>Selected products</span>
-            <span>01—04</span>
-          </div>
-
-          <div className={styles.previewBody}>
-            <p>Project visual composition will go here.</p>
-          </div>
-        </div>
+        <ProjectMedia
+          className={styles.preview}
+          title="Selected products"
+          index="01—04"
+          imageSrc="/map-of-pi.jpg"
+          alt="Selected project interfaces"
+        />
       </div>
     </section>
   );
