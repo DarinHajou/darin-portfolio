@@ -1,8 +1,7 @@
 import './App.css'
-
 import Navigation from "./components/Navigation/Navigation";
-
 import Hero from "./sections/Hero/Hero";
+import MapOfPi from "./sections/MapOfPi/MapOfPi";
 
 function App() {
   return (
@@ -12,10 +11,7 @@ function App() {
       <main id="top">
         <Hero />
 
-        <section id="work" className="page-container page-section">
-          <p className="label">Selected work</p>
-          <h2 className="heading-section">Projects</h2>
-        </section>
+        <MapOfPi />
 
         <section id="about" className="page-container page-section">
           <h2 className="heading-section">About</h2>
