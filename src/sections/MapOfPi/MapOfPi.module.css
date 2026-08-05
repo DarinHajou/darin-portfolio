@@ -1,6 +1,7 @@
 .section {
   padding-block: var(--space-24);
-  border-top: 1px solid var(--color-border);
+
+  border-bottom: 1px solid var(--color-border);
 }
 
 .inner {
@@ -26,7 +27,7 @@
   line-height: 1.4;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-text-secondary);
+  color: var(--color-accent);
 }
 
 .headingGroup {
@@ -43,51 +44,206 @@
 
 .summary {
   max-width: 40rem;
+
   font-size: var(--text-md);
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--color-text-secondary);
 }
 
-.media {
-  width: 100%;
+.productEvidence {
+  overflow: hidden;
+
+  background: var(--color-bg-deep);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
 }
 
-.details {
-  display: grid;
-  gap: var(--space-12);
-}
+.evidenceHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
 
-.storyBlock {
-  display: grid;
-  gap: var(--space-4);
-}
+  padding: var(--space-4) var(--space-6);
 
-.bodyCopy {
-  max-width: 42rem;
-  font-size: var(--text-md);
-  line-height: 1.65;
-  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+
+  border-bottom: 1px solid var(--color-border);
 }
 
 .evidenceGrid {
   display: grid;
-  gap: var(--space-8);
 }
 
-.contributions {
+.videoPanel,
+.stillPanel {
+  min-width: 0;
+  margin: 0;
+}
+
+.videoPanel {
   display: grid;
-  gap: var(--space-6);
 
   padding: var(--space-8);
 
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+
+.videoFrame {
+  display: flex;
+  justify-content: center;
+
+  min-height: 32rem;
+  max-height: 44rem;
+
+  background: var(--color-bg-deep);
+}
+
+.video {
+  display: block;
+
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  max-height: 44rem;
+
+  object-fit: contain;
+}
+
+.evidenceDetails {
+  display: grid;
+  align-content: start;
+
+  border-top: 1px solid var(--color-border);
+}
+
+.stillFrame {
+  overflow: hidden;
+
+  aspect-ratio: 16 / 10;
+
+  background: var(--color-bg-deep);
+}
+
+.stillImage {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+
+.mediaCaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+
+  padding: var(--space-4) var(--space-6);
+
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+
+  border-top: 1px solid var(--color-border);
+}
+
+.mediaCaption span {
+  color: var(--color-text-muted);
+}
+
+.evidenceNote {
+  display: grid;
+  gap: var(--space-4);
+
+  padding: var(--space-8) var(--space-6);
+
+  border-top: 1px solid var(--color-border);
+}
+
+.evidenceNote > p:last-child {
+  max-width: 32rem;
+
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.overview {
+  display: grid;
+  gap: var(--space-12);
+}
+
+.storyBlock,
+.contextBlock {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+  text-align: left;
+}
+
+.bodyCopy {
+  max-width: 42rem;
+
+  font-size: var(--text-base);
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+.contextList {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.contextList li {
+  padding-block: var(--space-3);
+
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+
+  border-top: 1px solid var(--color-border);
+}
+
+.contextList li:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contributionsSection {
+  display: grid;
+  gap: var(--space-8);
+
+  padding-top: var(--space-8);
+
+  border-top: 1px solid var(--color-border-strong);
+}
+
+.contributionsHeader {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.contributionsHeader > p:last-child {
+  max-width: 34rem;
+
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
 }
 
 .contributionList {
   display: grid;
-  gap: var(--space-4);
 
   margin: 0;
   padding: 0;
@@ -96,61 +252,30 @@
 }
 
 .contributionList li {
-  padding-bottom: var(--space-4);
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: var(--space-4);
 
-  font-size: var(--text-md);
-  color: var(--color-text-primary);
+  padding-block: var(--space-5, 1.25rem);
 
-  border-bottom: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border);
 }
 
 .contributionList li:last-child {
-  padding-bottom: 0;
-  border-bottom: 0;
-}
-
-.systemMap {
-  overflow: hidden;
-
-  min-height: 22rem;
-
-  background: var(--color-bg-deep);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-}
-
-.systemMapHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: var(--space-4) var(--space-6);
-
   border-bottom: 1px solid var(--color-border);
 }
 
-.systemMapHeader span {
+.contributionList span {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: var(--color-accent);
 }
 
-.systemMapBody {
-  display: grid;
-  place-items: center;
-
-  min-height: 18rem;
-  padding: var(--space-8);
-
-  text-align: center;
-  color: var(--color-text-muted);
-}
-
-.systemMapBody p {
-  max-width: 28rem;
-  font-size: var(--text-sm);
+.contributionList p {
+  font-size: var(--text-md);
+  line-height: 1.4;
+  color: var(--color-text-primary);
 }
 
 .footer {
@@ -167,34 +292,18 @@
   gap: var(--space-4);
 }
 
-.technologyList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.technologyList li {
-  padding: var(--space-2) var(--space-3);
-
+.technologyText {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
+  line-height: 1.8;
   letter-spacing: 0.04em;
-  color: var(--color-text-secondary);
-
-  border: 1px solid var(--color-border);
-  border-radius: 999px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
 }
 
 .projectLinks {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-4);
 }
 
 .projectLinks a {
@@ -214,9 +323,19 @@
     border-color var(--duration-fast) var(--ease-standard);
 }
 
+.projectLinks a span {
+  color: var(--color-accent);
+
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
 .projectLinks a:hover {
   color: var(--color-accent);
   border-color: var(--color-accent);
+}
+
+.projectLinks a:hover span {
+  transform: translate(0.15rem, -0.15rem);
 }
 
 .projectLinks a:focus-visible {
@@ -253,11 +372,35 @@
     grid-column: 8 / -1;
   }
 
-  .media {
-    grid-column: 1 / -1;
-  }
+  .productEvidence {
+  grid-column: 1 / -1;
+}
 
-  .details {
+.evidenceGrid {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.videoPanel {
+  grid-column: 1 / 6;
+
+  border-right: 1px solid var(--color-border);
+}
+
+.evidenceDetails {
+  grid-column: 6 / -1;
+
+  border-top: 0;
+}
+
+.videoFrame {
+  min-height: 38rem;
+}
+
+.stillFrame {
+  aspect-ratio: 16 / 9;
+}
+
+  .overview {
     grid-column: 1 / -1;
 
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -265,26 +408,33 @@
   }
 
   .storyBlock:first-child {
-    grid-column: 1 / 6;
+    grid-column: 1 / 5;
   }
 
-  .storyBlock:last-child {
-    grid-column: 7 / -1;
+  .storyBlock:nth-child(2) {
+    grid-column: 5 / 9;
   }
 
-  .evidenceGrid {
+  .contextBlock {
+    grid-column: 10 / -1;
+  }
+
+  .contributionsSection {
     grid-column: 1 / -1;
 
     grid-template-columns: repeat(12, minmax(0, 1fr));
     column-gap: var(--space-6);
   }
 
-  .contributions {
+  .contributionsHeader {
     grid-column: 1 / 5;
   }
 
-  .systemMap {
-    grid-column: 5 / -1;
+  .contributionList {
+    grid-column: 6 / -1;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--space-8);
   }
 
   .footer {
@@ -301,6 +451,6 @@
 
   .projectLinks {
     grid-column: 9 / -1;
-    align-items: flex-end;
+    justify-content: flex-end;
   }
 }
