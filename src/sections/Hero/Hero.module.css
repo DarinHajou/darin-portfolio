@@ -3,7 +3,7 @@
   overflow: hidden;
 
   min-height: calc(100svh - 4.75rem);
-  padding-block: var(--space-16) var(--space-24);
+  padding-block: clamp(3.5rem, 7vw, 7rem) var(--space-24);
 
   border-bottom: 1px solid var(--color-border);
 }
@@ -36,7 +36,7 @@
 
   pointer-events: none;
 
-  opacity: 0.75;
+  opacity: 0.65;
 
   background-image:
     linear-gradient(var(--color-grid) 1px, transparent 1px),
@@ -47,8 +47,8 @@
   mask-image: linear-gradient(
     to bottom,
     rgb(0 0 0 / 90%),
-    rgb(0 0 0 / 35%) 55%,
-    transparent 92%
+    rgb(0 0 0 / 38%) 60%,
+    transparent 94%
   );
 }
 
@@ -57,7 +57,7 @@
   z-index: 1;
 
   display: grid;
-  gap: var(--space-16);
+  gap: clamp(2.5rem, 4vw, 4rem);
 }
 
 .metaRow {
@@ -69,6 +69,7 @@
 
 .eyebrow,
 .status,
+.noteLabel,
 .disciplines,
 .systemLine {
   font-family: var(--font-mono);
@@ -95,43 +96,113 @@
 
 .status {
   display: none;
-  color: var(--color-accent);
+
+  color: var(--color-text-secondary);
 }
 
 .mainContent {
   display: grid;
-  gap: var(--space-16);
+  gap: var(--space-12);
 }
 
 .copy {
   display: grid;
-  gap: var(--space-8);
+  justify-items: start;
+  gap: var(--space-4);
+}
+
+.introLine {
+  justify-self: start;
+
+  font-size: clamp(1.125rem, 1.5vw, 1.4rem);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--color-text-secondary);
 }
 
 .title {
-  max-width: 14ch;
+  max-width: 11.5ch;
 
-  font-size: clamp(3rem, 6.5vw, 6.75rem);
+  font-size: clamp(3.5rem, 6.9vw, 7.2rem);
   font-weight: 500;
-  line-height: 0.94;
-  letter-spacing: -0.055em;
+  line-height: 0.92;
+  letter-spacing: -0.058em;
+
+  text-wrap: balance;
+}
+
+.titleLead,
+.accentText {
+  display: block;
 }
 
 .accentText {
   color: var(--color-accent);
-  text-shadow: 0 0 2.5rem var(--color-accent-soft);
+  text-shadow: 0 0 2.25rem var(--color-accent-soft);
+}
+
+.personalNote {
+  position: relative;
+
+  width: 100%;
+  max-width: 31rem;
+  padding-left: var(--space-6);
+
+  text-align: left;
+
+  border-left: 1px solid var(--color-accent-muted);
+}
+
+.personalNote::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -0.25rem;
+
+  width: 0.5rem;
+  height: 0.5rem;
+
+  background: var(--color-accent);
+  box-shadow: 0 0 0.8rem var(--color-accent-muted);
+}
+
+.noteLabel {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  margin-bottom: var(--space-4);
+
+  color: var(--color-bg);
+  background: var(--color-accent);
+}
+
+.noteText {
+  max-width: 27rem;
+
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.lowerContent {
+  display: grid;
+  gap: var(--space-16);
 }
 
 .supportingContent {
   display: grid;
-  gap: var(--space-6);
+  align-content: start;
+  gap: var(--space-8);
 
-  max-width: 34rem;
+  max-width: 35rem;
 }
 
 .summary {
-  font-size: var(--text-md);
-  line-height: 1.55;
+  max-width: 32rem;
+
+  font-size: var(--text-base);
+  line-height: 1.7;
   color: var(--color-text-secondary);
 }
 
@@ -229,6 +300,7 @@
 
 .systemLine {
   display: none;
+
   color: var(--color-text-muted);
 }
 
@@ -247,10 +319,14 @@
     min-height: calc(100svh - 5.25rem);
   }
 
+  .introLine {
+    margin-left: clamp(3rem, 8vw, 8rem);
+  }
+  
   .heroInner {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     column-gap: var(--space-6);
-    row-gap: var(--space-16);
+    row-gap: clamp(2.75rem, 4vw, 4.5rem);
   }
 
   .metaRow {
@@ -270,23 +346,36 @@
   }
 
   .copy {
-    grid-column: 1 / 8;
-    gap: var(--space-12);
+    grid-column: 1 / 9;
+  }
+
+  .personalNote {
+    grid-column: 9 / -1;
+
+    align-self: end;
+    margin-bottom: var(--space-2);
+  }
+
+  .lowerContent {
+    grid-column: 1 / -1;
+
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--space-6);
+    align-items: end;
+  }
+
+  .supportingContent {
+    grid-column: 1 / 5;
+
+    padding-bottom: var(--space-4);
   }
 
   .previewWrap {
-    grid-column: 8 / -1;
-    align-self: end;
+    grid-column: 6 / -1;
   }
 
   .preview {
-    min-height: 22rem;
-  }
-
-  .actions {
-    flex-direction: row;
-    align-items: flex-end;
-    gap: var(--space-12);
+    min-height: 24rem;
   }
 
   .systemLine {
@@ -303,8 +392,28 @@
 }
 
 @media (min-width: 1200px) {
+  .copy {
+    grid-column: 1 / 9;
+  }
+
+  .personalNote {
+    grid-column: 9 / -1;
+  }
+
   .title {
-    max-width: 11ch;
+    max-width: 11.5ch;
+  }
+
+  .supportingContent {
+    grid-column: 1 / 5;
+  }
+
+  .previewWrap {
+    grid-column: 5 / -1;
+  }
+
+  .preview {
+    min-height: 27rem;
   }
 }
 
