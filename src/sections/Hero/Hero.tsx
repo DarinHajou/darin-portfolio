@@ -1,5 +1,23 @@
-import ProjectMedia from "../../components/ProjectMedia/ProjectMedia";
 import styles from "./Hero.module.css";
+
+const selectedWork = [
+  {
+    index: "01",
+    title: "Map of Pi",
+  },
+  {
+    index: "02",
+    title: "Reset with Context",
+  },
+  {
+    index: "03",
+    title: "Whisper",
+  },
+  {
+    index: "04",
+    title: "Bosant",
+  },
+];
 
 function Hero() {
   return (
@@ -10,11 +28,7 @@ function Hero() {
         <div className={styles.metaRow}>
           <p className={styles.eyebrow}>
             <span className={styles.metaSignal} aria-hidden="true" />
-            Darin / Oslo / 2026
-          </p>
-
-          <p className={styles.status}>
-            Frontend developer / Product builder
+            Frontend-focused full-stack developer / Oslo / 2026
           </p>
         </div>
 
@@ -40,49 +54,69 @@ function Hero() {
             <p className={styles.noteLabel}>How I work</p>
 
             <p className={styles.noteText}>
-              I start with the problem, not the technology. Once the problem is clear, the interface, architecture, and implementation become easier to define. 
+              I start with the problem, not the technology. Once the problem is
+              clear, the interface, architecture, and implementation become
+              easier to define.
             </p>
           </aside>
         </div>
 
-        <div className={styles.lowerContent}>
-          <div className={styles.supportingContent}>
-            <p className={styles.summary}>
-              Most of my experience comes from building and improving real
-              products, not isolated demos. I work frontend-first, but I’m
-              comfortable following a feature through the backend, data, and
-              product rules behind it.
-            </p>
+       <div className={styles.lowerContent}>
+        <div className={styles.supportingContent}>
+          <p className={styles.summary}>
+            My focus is frontend, but my work spans the full product:
+            interfaces and user flows, backend services, data models,
+            payments, integrations, and business logic.
+          </p>
+        </div>
 
-            <div className={styles.actions}>
-              <a className={styles.primaryLink} href="#work">
-                View selected work
-                <span aria-hidden="true">↘</span>
-              </a>
+        <div className={styles.workShowcase}>
+          <div className={styles.showcaseHeader}>
+            <p className={styles.showcaseLabel}>Selected work / 01—04</p>
 
-              <p className={styles.disciplines}>
-                Interface / Logic / Data / Product
-              </p>
+            <a className={styles.primaryLink} href="#work">
+              Explore projects
+              <span aria-hidden="true">↘</span>
+            </a>
+          </div>
+
+          <figure className={styles.workPreview}>
+            <figcaption className={styles.previewHeader}>
+              <span>Project preview</span>
+              <span>01 / 04</span>
+            </figcaption>
+
+            <div className={styles.previewViewport}>
+              <img
+                className={styles.previewImage}
+                src="/mop.png"
+                alt="Map of Pi commerce platform preview"
+              />
             </div>
-          </div>
+          </figure>
 
-          <div className={styles.previewWrap}>
-            <ProjectMedia
-              className={styles.preview}
-              title="One of the products I help build"
-              index="Map of Pi / 01"
-              imageSrc="/map-of-pi.jpg"
-              alt="Map of Pi commerce platform interface"
-            />
+          <div className={styles.workIndex}>
+            <div className={styles.workIndexHeader}>
+              <p>Project index</p>
+              <span>04 projects</span>
+            </div>
+
+            <ol className={styles.workList}>
+              {selectedWork.map((project, projectIndex) => (
+                <li
+                  className={`${styles.workItem} ${
+                    projectIndex === 0 ? styles.workItemActive : ""
+                  }`}
+                  key={project.title}
+                >
+                  <span className={styles.workNumber}>{project.index}</span>
+                  <span className={styles.workTitle}>{project.title}</span>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
-
-        <div className={styles.systemLine}>
-          <span>Frontend first</span>
-          <span>Curious across the stack</span>
-          <span>Focused on useful products</span>
-          <span>Based in Oslo</span>
-        </div>
+      </div>
       </div>
     </section>
   );
