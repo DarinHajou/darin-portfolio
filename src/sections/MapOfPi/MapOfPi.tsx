@@ -1,12 +1,12 @@
 import styles from "./MapOfPi.module.css";
 
 const contributions = [
-  "Membership and renewal flows",
-  "Pi payment approval and completion",
-  "Referral architecture",
-  "Watch Ads reward system",
-  "Search and seller experiences",
-  "Backend services and MongoDB models",
+  "Search and Sell Center experiences",
+  "Membership and referral architecture",
+  "Push notification features",
+  "Pi Network payment and authentication integrations",
+  "Watch Ads reward system",  
+  "Lazy loading and performance improvements",
 ];
 
 const projectBadges = [
@@ -139,8 +139,7 @@ function MapOfPi() {
             </p>
 
             <p>
-              Work spanning frontend, backend, payments, data, and product
-              logic.
+              Backend APIs, services, and MongoDB models supporting these features.
             </p>
           </header>
 
