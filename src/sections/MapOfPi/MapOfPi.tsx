@@ -55,9 +55,7 @@ function MapOfPi() {
                 </div>
 
                 <p className={styles.summary}>
-                  A live commerce platform that helps users discover businesses
-                  and gives merchants a place to build a presence inside the Pi
-                  ecosystem.
+                  A global commerce platform connecting more than 2 million users with 140,000 sellers across the Pi ecosystem.
                 </p>
 
                 <p className={styles.role}>
