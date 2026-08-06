@@ -9,10 +9,19 @@ const contributions = [
   "Backend services and MongoDB models",
 ];
 
-const context = [
-  "Approximately 2M users",
-  "100K+ merchants",
-  "Live Pi ecosystem product",
+const projectBadges = [
+  {
+    src: "/hackaton.png",
+    alt: "2024 Pi eCommerce Hackathon Winner",
+  },
+  {
+    src: "/2M.png",
+    alt: "2 million users and growing",
+  },
+  {
+    src: "/140k.png",
+    alt: "140 thousand sellers",
+  },
 ];
 
 function MapOfPi() {
@@ -23,83 +32,86 @@ function MapOfPi() {
       aria-labelledby="map-of-pi-title"
     >
       <div className={`page-container ${styles.inner}`}>
-        <header className={styles.intro}>
+        <header className={styles.projectHeader}>
           <div className={styles.meta}>
             <p className="label">01 / Selected work</p>
             <p className={styles.status}>Live platform</p>
           </div>
 
-          <div className={styles.headingGroup}>
-            <h2 id="map-of-pi-title" className={styles.title}>
-              Map of Pi
-            </h2>
+          <div className={styles.projectLead}>
+            <div className={styles.projectIntro}>
+              <div className={styles.introCore}>
+                <div className={styles.titleRow}>
+                  <h2 id="map-of-pi-title" className={styles.title}>
+                    Map of Pi
+                  </h2>
 
-            <p className={styles.summary}>
-              A live commerce platform that helps users discover businesses and
-              gives merchants a place to build a presence inside the Pi
-              ecosystem.
-            </p>
-          </div>
-        </header>
+                  <img
+                    className={styles.logo}
+                    src="/mapofpi-logo.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
 
-        <section
-          className={styles.productEvidence}
-          aria-label="Map of Pi product walkthrough and interface preview"
-        >
-          <header className={styles.evidenceHeader}>
-            <p>Product evidence</p>
-            <span>Walkthrough / 01</span>
-          </header>
+                <p className={styles.summary}>
+                  A live commerce platform that helps users discover businesses
+                  and gives merchants a place to build a presence inside the Pi
+                  ecosystem.
+                </p>
 
-          <div className={styles.evidenceGrid}>
-            <figure className={styles.videoPanel}>
-              <div className={styles.videoFrame}>
+                <p className={styles.role}>
+                  <span className={styles.metaSignal} aria-hidden="true" />
+                  Co-founder / Frontend-focused full-stack development
+                </p>
+              </div>
+
+              <div className={styles.projectProof}>
+                <p className={styles.proofLabel}>Platform proof</p>
+
+                <ul className={styles.badgeList}>
+                  {projectBadges.map((badge) => (
+                    <li key={badge.src}>
+                      <img
+                        className={styles.badge}
+                        src={badge.src}
+                        alt={badge.alt}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <figure className={styles.walkthrough}>
+              <div className={styles.walkthroughFrame}>
                 <video
-                  className={styles.video}
-                  src="/Meet-Darin.mp4"
+                  className={styles.walkthroughVideo}
+                  src="/pi-video.mp4"
                   poster="/map-of-pi.png"
                   autoPlay
                   muted
                   loop
                   playsInline
                   preload="metadata"
-                  aria-label="Map of Pi mobile product walkthrough"
+                  aria-label="Map of Pi product walkthrough"
+                  onLoadedMetadata={(event) => {
+                    event.currentTarget.defaultPlaybackRate = 2.5;
+                    event.currentTarget.playbackRate = 2.5;
+                  }}
+                  onPlay={(event) => {
+                    event.currentTarget.playbackRate = 2.5;
+                  }}
                 />
               </div>
 
-              <figcaption className={styles.mediaCaption}>
-                Mobile product walkthrough
-                <span>Live platform</span>
+              <figcaption className={styles.walkthroughCaption}>
+                <span>Product walkthrough</span>
+                <span>01 / Live</span>
               </figcaption>
             </figure>
-
-            <div className={styles.evidenceDetails}>
-              <figure className={styles.stillPanel}>
-                <div className={styles.stillFrame}>
-                  <img
-                    className={styles.stillImage}
-                    src="/map-of-pi.png"
-                    alt="Map of Pi platform overview"
-                  />
-                </div>
-
-                <figcaption className={styles.mediaCaption}>
-                  Platform overview
-                  <span>Global commerce network</span>
-                </figcaption>
-              </figure>
-
-              <article className={styles.evidenceNote}>
-                <p className="label">What this shows</p>
-
-                <p>
-                  A product spanning discovery, merchant tools, memberships, payments,
-                  and commerce flows across a live user ecosystem.
-                </p>
-              </article>
-            </div>
           </div>
-        </section>
+        </header>
 
         <div className={styles.overview}>
           <article className={styles.storyBlock}>
@@ -121,16 +133,6 @@ function MapOfPi() {
               and the product rules connecting them.
             </p>
           </article>
-
-          <aside className={styles.contextBlock}>
-            <p className="label">Context</p>
-
-            <ul className={styles.contextList}>
-              {context.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </aside>
         </div>
 
         <section
@@ -151,10 +153,7 @@ function MapOfPi() {
           <ol className={styles.contributionList}>
             {contributions.map((contribution, index) => (
               <li key={contribution}>
-                <span>
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
+                <span>{String(index + 1).padStart(2, "0")}</span>
                 <p>{contribution}</p>
               </li>
             ))}
