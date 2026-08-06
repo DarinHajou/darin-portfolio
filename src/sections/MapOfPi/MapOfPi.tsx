@@ -116,9 +116,7 @@ function MapOfPi() {
             <p className="label">The product</p>
 
             <p className={styles.bodyCopy}>
-              Map of Pi connects a global community of users and merchants
-              through search, business discovery, seller tools, memberships,
-              payments, and commerce features.
+              Map of Pi connects a global community of users and merchants through search, business discovery, seller tools, memberships, payments, and marketplace experiences.
             </p>
           </article>
 
@@ -126,9 +124,7 @@ function MapOfPi() {
             <p className="label">My contribution</p>
 
             <p className={styles.bodyCopy}>
-              As a co-founder and hands-on developer, I contribute across
-              frontend experiences, backend services, payments, data models,
-              and the product rules connecting them.
+              As a co-founder and hands-on developer, I’ve built many of the foundational features and systems behind Map of Pi, spanning frontend experiences, backend services, payments, data models, and product logic.
             </p>
           </article>
         </div>
