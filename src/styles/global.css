@@ -3,9 +3,12 @@
 *::after {
   box-sizing: border-box;
 }
-
+#root {
+  zoom: 0.6;
+}
 html {
   scroll-behavior: smooth;
+  font-size: 93.75%;
 }
 
 body {
