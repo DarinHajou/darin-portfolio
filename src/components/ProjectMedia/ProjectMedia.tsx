@@ -28,6 +28,8 @@ function ProjectMedia({
       return;
     }
 
+    videoRef.current.playbackRate = 1.3;
+
     try {
       await videoRef.current.play();
       setIsPlaying(true);

@@ -3,9 +3,12 @@
 *::after {
   box-sizing: border-box;
 }
-
+#root {
+  zoom: 0.9;
+}
 html {
   scroll-behavior: smooth;
+  font-size: 93.75%;
 }
 
 body {
@@ -40,16 +43,6 @@ select {
 button,
 a {
   color: inherit;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  border: 0;
-  padding: 0;
-  background: none;
 }
 
 h1,

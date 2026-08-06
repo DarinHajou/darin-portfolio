@@ -1,118 +1,170 @@
-import ProjectMedia from "../../components/ProjectMedia/ProjectMedia";
 import styles from "./MapOfPi.module.css";
 
 const contributions = [
-  "Membership and renewal flows",
-  "Pi payment approval and completion",
-  "Referral architecture",
-  "Watch Ads reward system",
-  "Search and seller experiences",
-  "Backend services and MongoDB models",
+  "Search and Sell Center experiences",
+  "Membership and referral architecture",
+  "Push notification features",
+  "Pi Network payment and authentication integrations",
+  "Watch Ads reward system",  
+  "Lazy loading and performance improvements",
 ];
 
-const technologies = [
-  "React",
-  "TypeScript",
-  "Node.js",
-  "MongoDB",
-  "Pi SDK",
-  "REST APIs",
-  "Postman",
+const projectBadges = [
+  {
+    src: "/hackaton.png",
+    alt: "2024 Pi eCommerce Hackathon Winner",
+  },
+  {
+    src: "/2M.png",
+    alt: "2 million users and growing",
+  },
+  {
+    src: "/140k.png",
+    alt: "140 thousand sellers",
+  },
 ];
 
 function MapOfPi() {
   return (
-    <section id="work" className={styles.section}>
+    <section
+      id="work"
+      className={styles.section}
+      aria-labelledby="map-of-pi-title"
+    >
       <div className={`page-container ${styles.inner}`}>
-        <header className={styles.intro}>
+        <header className={styles.projectHeader}>
           <div className={styles.meta}>
-            <p className="label">01 · Selected work</p>
+            <p className="label">01 / Selected work</p>
             <p className={styles.status}>Live platform</p>
           </div>
 
-          <div className={styles.headingGroup}>
-            <h2 className={styles.title}>Map of Pi</h2>
+          <div className={styles.projectLead}>
+            <div className={styles.projectIntro}>
+              <div className={styles.introCore}>
+                <div className={styles.titleRow}>
+                  <h2 id="map-of-pi-title" className={styles.title}>
+                    Map of Pi
+                  </h2>
 
-            <p className={styles.summary}>
-              [A concise explanation of what Map of Pi is and why the project
-              matters.]
-            </p>
+                  <img
+                    className={styles.logo}
+                    src="/mapofpi-logo.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+
+                <p className={styles.summary}>
+                  A global commerce platform connecting more than 2 million users with 140,000 sellers across the Pi ecosystem.
+                </p>
+
+                <p className={styles.role}>
+                  <span className={styles.metaSignal} aria-hidden="true" />
+                  Co-founder / Frontend-focused full-stack development
+                </p>
+              </div>
+
+              <div className={styles.projectProof}>
+                <p className={styles.proofLabel}>Platform proof</p>
+
+                <ul className={styles.badgeList}>
+                  {projectBadges.map((badge) => (
+                    <li key={badge.src}>
+                      <img
+                        className={styles.badge}
+                        src={badge.src}
+                        alt={badge.alt}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <figure className={styles.walkthrough}>
+              <div className={styles.walkthroughFrame}>
+                <video
+                  className={styles.walkthroughVideo}
+                  src="/pi-video.mp4"
+                  poster="/map-of-pi.png"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label="Map of Pi product walkthrough"
+                  onLoadedMetadata={(event) => {
+                    event.currentTarget.defaultPlaybackRate = 2.5;
+                    event.currentTarget.playbackRate = 2.5;
+                  }}
+                  onPlay={(event) => {
+                    event.currentTarget.playbackRate = 2.5;
+                  }}
+                />
+              </div>
+
+              <figcaption className={styles.walkthroughCaption}>
+                <span>Product walkthrough</span>
+                <span>01 / Live</span>
+              </figcaption>
+            </figure>
           </div>
         </header>
 
-        <ProjectMedia
-          className={styles.media}
-          title="Map of Pi"
-          index="01"
-          imageSrc="/images/map-of-pi-preview.jpg"
-          alt="Map of Pi product interface"
-        />
-
-        <div className={styles.details}>
+        <div className={styles.overview}>
           <article className={styles.storyBlock}>
             <p className="label">The product</p>
 
             <p className={styles.bodyCopy}>
-              [Explain the platform, the user problem it addresses, and the
-              wider product context.]
+              Map of Pi connects a global community of users and merchants through search, business discovery, seller tools, memberships, payments, and marketplace experiences.
             </p>
           </article>
 
           <article className={styles.storyBlock}>
-            <p className="label">My role</p>
+            <p className="label">My contribution</p>
 
             <p className={styles.bodyCopy}>
-              [Explain your role as co-founder and hands-on developer, including
-              the areas where you contributed personally.]
+              As a co-founder and hands-on developer, I’ve built many of the foundational features and systems behind Map of Pi, spanning frontend experiences, backend services, payments, data models, and product logic.
             </p>
           </article>
         </div>
 
-        <div className={styles.evidenceGrid}>
-          <article className={styles.contributions}>
-            <p className="label">Selected contributions</p>
+        <section
+          className={styles.contributionsSection}
+          aria-labelledby="contributions-title"
+        >
+          <header className={styles.contributionsHeader}>
+            <p id="contributions-title" className="label">
+              Selected contributions
+            </p>
 
-            <ul className={styles.contributionList}>
-              {contributions.map((contribution) => (
-                <li key={contribution}>{contribution}</li>
-              ))}
-            </ul>
-          </article>
+            <p>
+              Backend APIs, services, and MongoDB models supporting these features.
+            </p>
+          </header>
 
-          <article className={styles.systemMap}>
-            <div className={styles.systemMapHeader}>
-              <p className="label">System evidence</p>
-              <span>Placeholder</span>
-            </div>
-
-            <div className={styles.systemMapBody}>
-              <p>
-                Contribution map, feature flow, architecture diagram, or another
-                selected artifact will go here.
-              </p>
-            </div>
-          </article>
-        </div>
+          <ol className={styles.contributionList}>
+            {contributions.map((contribution, index) => (
+              <li key={contribution}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <p>{contribution}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
 
         <footer className={styles.footer}>
           <div className={styles.technologyGroup}>
             <p className="label">Selected technology</p>
 
-            <ul className={styles.technologyList}>
-              {technologies.map((technology) => (
-                <li key={technology}>{technology}</li>
-              ))}
-            </ul>
+            <p className={styles.technologyText}>
+              React / TypeScript / Node.js / MongoDB / Pi SDK / REST APIs
+            </p>
           </div>
 
           <div className={styles.projectLinks}>
-            <a href="#" aria-label="View Map of Pi">
-              View project
-              <span aria-hidden="true">↗</span>
-            </a>
-
-            <a href="#" aria-label="Request a private Map of Pi walkthrough">
-              Private walkthrough
+            <a href="#contact">
+              Request a private walkthrough
               <span aria-hidden="true">↗</span>
             </a>
           </div>

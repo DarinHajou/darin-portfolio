@@ -11,7 +11,10 @@
   --color-border: rgb(241 239 233 / 12%);
   --color-border-strong: rgb(241 239 233 / 22%);
 
-  --color-accent: #8ca5ff;
+ --color-accent: #5cff95;
+  --color-accent-soft: rgb(92 255 149 / 14%);
+  --color-accent-muted: rgb(92 255 149 / 42%);
+  --color-grid: rgb(92 255 149 / 6%);
 
   /* Typography */
   --font-sans: "Instrument Sans", sans-serif;

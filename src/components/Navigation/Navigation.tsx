@@ -5,7 +5,7 @@ const navigationLinks = [
   { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
   { label: "Résumé", href: "/resume.pdf" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "#contact", isContact: true },
 ];
 
 function Navigation() {
@@ -19,12 +19,13 @@ function Navigation() {
     <header className={styles.header}>
       <div className={`page-container ${styles.navigation}`}>
         <a
-          className={styles.name}
+          className={styles.identity}
           href="#top"
           onClick={closeMenu}
           aria-label="Go to the top of the page"
         >
-          Darin Hussein
+          <span className={styles.signal} aria-hidden="true" />
+          <span>Darin H. Hajou</span>
         </a>
 
         <button
@@ -35,6 +36,10 @@ function Navigation() {
           onClick={() => setIsMenuOpen((currentState) => !currentState)}
         >
           {isMenuOpen ? "Close" : "Menu"}
+
+          <span className={styles.menuSymbol} aria-hidden="true">
+            {isMenuOpen ? "×" : "+"}
+          </span>
         </button>
 
         <nav
@@ -48,11 +53,19 @@ function Navigation() {
             {navigationLinks.map((link) => (
               <li key={link.label}>
                 <a
-                  className={styles.navLink}
+                  className={`${styles.navLink} ${
+                    link.isContact ? styles.contactLink : ""
+                  }`}
                   href={link.href}
                   onClick={closeMenu}
                 >
                   {link.label}
+
+                  {link.isContact && (
+                    <span className={styles.arrow} aria-hidden="true">
+                      ↗
+                    </span>
+                  )}
                 </a>
               </li>
             ))}
