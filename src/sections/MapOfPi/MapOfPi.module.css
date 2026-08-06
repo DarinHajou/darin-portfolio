@@ -38,7 +38,7 @@
 .projectIntro {
   display: flex;
   flex-direction: column;
-  gap: var(--space-16);
+  gap: var(--space-12);
 
   text-align: left;
 }
@@ -149,7 +149,6 @@
 .projectProof {
   display: grid;
   gap: var(--space-4);
-  transform: translateY(-0.75rem);
   width: 100%;
 }
 
@@ -357,9 +356,8 @@
   .inner {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     column-gap: var(--space-6);
-    row-gap: var(--space-16);
+    row-gap: var(--space-12);
   }
-
   .projectHeader {
     grid-column: 1 / -1;
   }
@@ -374,13 +372,14 @@
     grid-column: 1 / 8;
 
     min-height: 100%;
-    padding-block: var(--space-16);
+    padding-block: var(--space-8);
+
+    justify-content: center;
   }
 
   .introCore {
-    margin-block: auto;
+    margin-block: 0;
   }
-
   .walkthrough {
     grid-column: 9 / -1;
 
@@ -391,11 +390,11 @@
  .badgeList {
     flex-wrap: nowrap;
     justify-content: flex-start;
-    gap: clamp(1.7rem, 3.2vw, 3.2rem);
+    gap: clamp(2.7rem, 3.2vw, 3.2rem);
   }
 
   .badge {
-    height: clamp(4.35rem, 5.2vw, 5.95rem);
+    height: clamp(4.75rem, 4.2vw, 4.95rem);
   }
   .overview {
     grid-column: 1 / -1;
