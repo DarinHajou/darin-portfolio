@@ -2,6 +2,7 @@ import './App.css'
 import Navigation from "./components/Navigation/Navigation";
 import Hero from "./sections/Hero/Hero";
 import MapOfPi from "./sections/MapOfPi/MapOfPi";
+import ResetWithContext from "./sections/ResetWithContext/ResetWithContext";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <Hero />
 
         <MapOfPi />
+
+        <ResetWithContext/>
 
         <section id="about" className="page-container page-section">
           <h2 className="heading-section">About</h2>
