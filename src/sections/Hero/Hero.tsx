@@ -37,14 +37,23 @@ function Hero() {
             <p className={styles.introLine}>Hi, I’m Darin.</p>
 
             <h1 id="hero-title" className={styles.title}>
-              <span className={styles.titleLead}>
-                I build digital products
-              </span>
-
-              <span className={styles.accentText}>
-                that solve real problems.
+              <span className={styles.titleLine}>I build digital</span>
+              <span className={styles.titleLine}>products that solve</span>
+              <span className={`${styles.titleLine} ${styles.accentText}`}>
+                real problems.
               </span>
             </h1>
+
+            <p className={styles.summary}>
+              My focus is frontend, but my work spans the full product:
+              interfaces and user flows, backend services, data models,
+              payments, integrations, and business logic.
+            </p>
+
+            <a className={styles.heroLink} href="#work">
+              View selected work
+              <span aria-hidden="true">↘</span>
+            </a>
           </div>
 
           <aside
@@ -54,27 +63,18 @@ function Hero() {
             <p className={styles.noteLabel}>How I work</p>
 
             <p className={styles.noteText}>
-              I start with the problem, not the technology. Once the problem is
-              clear, the interface, architecture, and implementation become
-              easier to define.
+              I like getting close to the whole product—how the interface
+              feels, how the logic behaves, how the data moves, and whether
+              the result is actually useful.
             </p>
           </aside>
         </div>
 
-       <div className={styles.lowerContent}>
-        <div className={styles.supportingContent}>
-          <p className={styles.summary}>
-            My focus is frontend, but my work spans the full product:
-            interfaces and user flows, backend services, data models,
-            payments, integrations, and business logic.
-          </p>
-        </div>
-
-        <div className={styles.workShowcase}>
+        <div id="work" className={styles.workShowcase}>
           <div className={styles.showcaseHeader}>
             <p className={styles.showcaseLabel}>Selected work / 01—04</p>
 
-            <a className={styles.primaryLink} href="#work">
+            <a className={styles.primaryLink} href="#projects">
               Explore projects
               <span aria-hidden="true">↘</span>
             </a>
@@ -116,7 +116,6 @@ function Hero() {
             </ol>
           </div>
         </div>
-      </div>
       </div>
     </section>
   );
