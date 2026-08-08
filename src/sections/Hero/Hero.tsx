@@ -37,10 +37,10 @@ function Hero() {
             <p className={styles.introLine}>Hi, I’m Darin.</p>
 
             <h1 id="hero-title" className={styles.title}>
-              <span className={styles.titleLine}>I build digital</span>
-              <span className={styles.titleLine}>products that solve</span>
+              <span className={styles.titleLine}>I build the</span>
+              <span className={styles.titleLine}>interface — and the</span>
               <span className={`${styles.titleLine} ${styles.accentText}`}>
-                real problems.
+                systems behind it.
               </span>
             </h1>
 
@@ -64,7 +64,7 @@ function Hero() {
 
             <p className={styles.noteText}>
               I like getting close to the whole product—how the interface
-              feels, how the logic behaves, how the data moves, and whether
+              feels, how the logic behaves, how the user thinks, how the data moves, and whether
               the result is actually useful.
             </p>
           </aside>
