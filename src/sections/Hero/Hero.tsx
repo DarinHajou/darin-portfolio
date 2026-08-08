@@ -38,7 +38,7 @@ function Hero() {
 
             <h1 id="hero-title" className={styles.title}>
               <span className={styles.titleLine}>I build the</span>
-              <span className={styles.titleLine}>interface — and the</span>
+              <span className={styles.titleLine}>interface and the</span>
               <span className={`${styles.titleLine} ${styles.accentText}`}>
                 systems behind it.
               </span>
