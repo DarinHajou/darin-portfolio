@@ -94,11 +94,11 @@ function MapOfPi() {
                   preload="metadata"
                   aria-label="Map of Pi product walkthrough"
                   onLoadedMetadata={(event) => {
-                    event.currentTarget.defaultPlaybackRate = 2.5;
-                    event.currentTarget.playbackRate = 2.5;
+                    event.currentTarget.defaultPlaybackRate = 1.5;
+                    event.currentTarget.playbackRate = 1.5;
                   }}
                   onPlay={(event) => {
-                    event.currentTarget.playbackRate = 2.5;
+                    event.currentTarget.playbackRate = 1.5;
                   }}
                 />
               </div>
@@ -138,9 +138,7 @@ function MapOfPi() {
               Selected contributions
             </p>
 
-            <p>
-              Backend APIs, services, and MongoDB models supporting these features.
-            </p>
+          
           </header>
 
           <ol className={styles.contributionList}>
