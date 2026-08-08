@@ -1,3 +1,4 @@
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -6,7 +7,8 @@
   min-height: calc(100svh - 5.25rem);
   padding-block: clamp(2.75rem, 5vw, 5rem);
 
-  border-bottom: 1px solid var(--color-border);
+
+  border-bottom: 10px solid var(--color-border);
 }
 
 .grid {
@@ -483,5 +485,11 @@
   .heroLink span,
   .primaryLink span {
     transition: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .heroLink {
+    margin-top: 1rem;
   }
 }
