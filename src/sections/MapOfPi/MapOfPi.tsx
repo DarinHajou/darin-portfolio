@@ -1,12 +1,12 @@
 import styles from "./MapOfPi.module.css";
 
 const contributions = [
-  "Search and Sell Center experiences",
-  "Membership and referral architecture",
-  "Push notification features",
-  "Pi Network payment and authentication integrations",
-  "Watch Ads reward system",  
-  "Lazy loading and performance improvements",
+  "Membership & referrals — tier and allowance architecture",
+  "Pi SDK — authentication and payments",
+  "Search & Sell Center — discovery and listing flows",
+  "Push notifications — delivery flows",
+  "Watch Ads — reward logic",  
+  "Performance — lazy loading and rendering",
 ];
 
 const projectBadges = [
@@ -116,7 +116,7 @@ function MapOfPi() {
             <p className="label">The product</p>
 
             <p className={styles.bodyCopy}>
-              Map of Pi connects a global community of users and merchants through search, business discovery, seller tools, memberships, payments, and marketplace experiences.
+              Map of Pi makes it easy to find sellers, shop locally, and pay with Pi. Explore the Pi Network marketplace and trade goods and services anywhere.
             </p>
           </article>
 
@@ -137,8 +137,6 @@ function MapOfPi() {
             <p id="contributions-title" className="label">
               Selected contributions
             </p>
-
-          
           </header>
 
           <ol className={styles.contributionList}>
@@ -149,8 +147,34 @@ function MapOfPi() {
               </li>
             ))}
           </ol>
-        </section>
+        <figure className={styles.testimony}>
+          <div className={styles.testimonyFrame}>
+            <video
+              className={styles.testimonyVideo}
+              src="/Meet-Darin.mp4"
+              poster="/map-of-pi.png"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="Meet Darin testimony"
+              onLoadedMetadata={(event) => {
+                event.currentTarget.defaultPlaybackRate = 1.7;
+                event.currentTarget.playbackRate = 1.7;
+              }}
+              onPlay={(event) => {
+                event.currentTarget.playbackRate = 1.7;
+              }}
+            />
+          </div>
 
+          <figcaption className={styles.testimonyCaption}>
+            <span>Product testimony</span>
+            <span>01 / Live</span>
+          </figcaption>
+        </figure>
+        </section>
         <footer className={styles.footer}>
           <div className={styles.technologyGroup}>
             <p className="label">Selected technology</p>
