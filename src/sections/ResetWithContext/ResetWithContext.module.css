@@ -33,7 +33,7 @@
   z-index: 1;
 
   display: grid;
-  gap: var(--space-24);
+  gap: var(--space-16);
 }
 
 .header {
@@ -210,8 +210,7 @@
   display: grid;
   gap: var(--space-12);
 
-  padding-top: var(--space-12);
-
+  padding-top: var(--space-8);
   border-top: 1px solid var(--color-border-strong);
 }
 
@@ -242,6 +241,7 @@
 
 .buildList {
   display: grid;
+  row-gap: var(--space-6);
 
   margin: 0;
   padding: 0;
@@ -249,46 +249,70 @@
   list-style: none;
 
   border-top: 1px solid var(--color-border-strong);
+  border-bottom: 1px solid var(--color-border-strong);
 }
 
 .buildList li {
+  position: relative;
+
   display: grid;
-  grid-template-columns: 2.5rem minmax(0, 1fr) auto;
+  /* Make both outer columns exactly 6rem (or whatever width fits "PROTOTYPE") */
+  grid-template-columns: 6rem minmax(0, 1fr) 6rem; 
   align-items: center;
   gap: var(--space-4);
 
   padding-block: var(--space-4);
+}
 
-  border-bottom: 1px solid var(--color-border);
+.buildList li:not(:last-child)::after {
+  content: "↓";
+
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: calc(var(--space-4) / -2);
+
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1;
+
+  pointer-events: none;
+
+  transform: translate(-50%, 50%);
 }
 
 .buildNumber {
-  color: var(--color-accent);
+  color: var(--color-text-muted);
 }
 
 .buildTitle {
+  min-width: 0;
+  margin: 0;
+  display: grid;
+  grid-auto-flow: row; /* Forces items to stack vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centers the text inside the rows */
   font-size: var(--text-base);
   font-weight: 500;
   line-height: 1.4;
 }
 
 .buildStatus {
-  color: var(--color-text-muted);
+  color: var(--color-accent);
+  position: relative;
 }
 
 .footer {
   display: grid;
   gap: var(--space-8);
-
-  padding-top: var(--space-12);
-
-  border-top: 1px solid var(--color-border);
 }
 
 .positioning {
-  max-width: 34rem;
+  max-width: 40rem;
 
-  font-size: var(--text-md);
+  font-size: var(--text-xl);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: -0.02em;
@@ -297,12 +321,13 @@
 .technology {
   line-height: 1.8;
   color: var(--color-text-muted);
+  
 }
 
 @media (min-width: 768px) {
   .intro {
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    column-gap: var(--space-6);
+    column-gap: var(--space-12);
     align-items: end;
   }
 
@@ -337,46 +362,65 @@
   }
 
   .footer {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    column-gap: var(--space-6);
-    align-items: end;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    /* column-gap: var(--space-6); */
+    /* align-items: start; */
   }
 
   .positioning {
-    grid-column: 1 / 7;
+    grid-column: 1 / 8;
   }
 
   .technology {
     grid-column: 8 / -1;
 
-    text-align: right;
+    text-align: center;
   }
 }
 
 @media (min-width: 1100px) {
   .buildList {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-
-    border-bottom: 1px solid var(--color-border-strong);
+    grid-template-columns: repeat(4, 1fr);
+    /* Fixed the gap conflict: clamped value was invalid because 4.5rem is larger than 4rem */
+    column-gap: clamp(2rem, 4vw, 4rem); 
+    row-gap: 0;
+    padding-block: var(--space-6);
   }
 
   .buildList li {
-    grid-template-columns: 1fr;
-    align-content: space-between;
-    gap: var(--space-6);
-
-    min-height: 10rem;
-    padding: var(--space-6);
-
-    border-right: 1px solid var(--color-border);
-    border-bottom: 0;
+    /* Changes internal layout to a simple vertical column track */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Forces number, title, and status to hard-align left */
+    gap: var(--space-2);
+    min-height: 0;
+    padding: 0;
   }
 
-  .buildList li:first-child {
-    border-left: 1px solid var(--color-border);
+  .buildList li:not(:last-child)::after {
+    content: "→";
+    /* Centers the arrow perfectly between the column gaps */
+    top: 50%;
+    right: calc(clamp(2rem, 2vw, 4rem) / -6);
+    bottom: auto;
+    left: auto;
+    transform: translate(50%, -50%);
+  }
+
+  .buildTitle {
+    /* Resets the mobile centering rules back to a clean left-alignment */
+    display: block;
+    text-align: left;
+    margin: 0;
+    font-size: var(--text-base);
   }
 
   .buildStatus {
-    align-self: end;
+    /* Ensures the status stays cleanly left-aligned with the rest of the text group */
+    text-align: left; 
+    align-self: flex-start;
   }
 }

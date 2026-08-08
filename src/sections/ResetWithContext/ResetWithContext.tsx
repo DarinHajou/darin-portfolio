@@ -3,7 +3,7 @@ import styles from "./ResetWithContext.module.css";
 const currentBuild = [
   {
     index: "01",
-    title: "Local session capture",
+    title: "Local live session capturing",
     status: "Built",
   },
   {
