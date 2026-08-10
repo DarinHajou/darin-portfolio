@@ -82,6 +82,7 @@
   line-height: 1.4;
   letter-spacing: 0.07em;
   text-transform: uppercase;
+  
 }
 
 .projectType,
@@ -89,7 +90,9 @@
 .promiseLabel {
   color: var(--color-text-muted);
 }
-
+.promiseLabel{
+ color: var(--color-accent); 
+}
 .title {
   font-size: clamp(2.25rem, 5.5vw, 5.5rem);
   font-weight: 500;
@@ -98,10 +101,13 @@
 
   text-wrap: balance;
 }
+.summaryGroup {
+  display: grid;
+  gap: var(--space-4);
 
-.summary {
   max-width: 48rem;
-
+}
+.summary {
   font-size: var(--text-md);
   line-height: 1.7;
   color: var(--color-text-secondary);
@@ -118,6 +124,7 @@
   padding-left: var(--space-6);
 
   border-left: 1px solid var(--color-accent-muted);
+  
 }
 
 .promise::before {
@@ -132,10 +139,11 @@
 
   background: var(--color-accent);
   box-shadow: 0 0 0.8rem var(--color-accent-muted);
+  
 }
 
 .promise > p:last-child {
-  font-size: var(--text-lg);
+  font-size: var(--text-md);
   font-weight: 500;
   line-height: 1.35;
   letter-spacing: -0.025em;
@@ -162,7 +170,7 @@
 }
 
 .secondaryFrame {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 8.5;
 }
 
 .primaryFrame::before,
@@ -190,6 +198,14 @@
   object-fit: cover;
   object-position: center;
 }
+.supportText{
+
+  justify-self: center;
+  font-size: var(--text-md);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  max-width: 58ch;
+}
 
 .secondaryImage {
   object-fit: contain;
@@ -212,28 +228,30 @@
   gap: var(--space-12);
 
   padding-top: var(--space-8);
+
   border-top: 1px solid var(--color-border-strong);
 }
 
 .buildCopy {
   display: grid;
   align-content: start;
-  gap: var(--space-6);
+  gap: var(--space-4);
+  text-align: left;
 }
 
 .subheading {
-  max-width: 17ch;
+  max-width: 18ch;
 
-  font-size: clamp(2rem, 3.2vw, 3.5rem);
+  font-size: clamp(1.75rem, 2.5vw, 2.75rem);
   font-weight: 500;
-  line-height: 1.04;
-  letter-spacing: -0.045em;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
 
   text-wrap: balance;
 }
 
 .bodyCopy {
-  max-width: 40rem;
+  max-width: 34rem;
 
   font-size: var(--text-base);
   line-height: 1.75;
@@ -295,7 +313,7 @@
   justify-content: center;
   align-items: center;
   text-align: center; /* Centers the text inside the rows */
-  font-size: var(--text-base);
+  
   font-weight: 500;
   line-height: 1.4;
 }
@@ -311,18 +329,20 @@
 }
 
 .positioning {
-  max-width: 40rem;
-
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: -0.02em;
+  text-wrap: balance;
 }
+
+ .supportLine {
+   margin-bottom: 40px;
+  }
 
 .technology {
   line-height: 1.8;
   color: var(--color-text-muted);
-  
 }
 
 @media (min-width: 768px) {
@@ -351,11 +371,11 @@
   }
 
   .buildCopy {
-    grid-column: 1 / 6;
+    grid-column: 1 / 5;
   }
 
   .secondaryVisual {
-    grid-column: 7 / -1;
+    grid-column: 6 / -1;
   }
 
   .buildList {
@@ -373,8 +393,13 @@
 
   .positioning {
     grid-column: 1 / 8;
-  }
+    font-size: var(--text-xl);
 
+  }
+  .supportLine {
+   grid-column: 8 / -1;
+   font-size: var(--text-md);
+  }
   .technology {
     grid-column: 8 / -1;
 
@@ -416,7 +441,7 @@
     display: block;
     text-align: left;
     margin: 0;
-    font-size: var(--text-base);
+    font-size: 0.75rem;
   }
 
   .buildStatus {
