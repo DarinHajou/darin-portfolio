@@ -226,7 +226,7 @@
 
   padding-block: var(--space-4);
 
-  /* border-top: 1px solid var(--color-border-strong); */
+  border-top: 1px solid var(--color-border-strong);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -281,7 +281,7 @@
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
+  object-fit: fill;
   object-position: center top;
 
   filter: saturate(0.85) contrast(1.05);
@@ -490,6 +490,6 @@
 
 @media (min-width: 768px) {
   .heroLink {
-    margin-top: 1rem;
+    margin-top: -1rem;
   }
 }
