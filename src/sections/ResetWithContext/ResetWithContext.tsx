@@ -35,7 +35,7 @@ function ResetWithContext() {
       <div className={`page-container ${styles.inner}`}>
         <header className={styles.header}>
           <div className={styles.meta}>
-            <p>02 / Selected work</p>
+            <p> 02 / Selected work</p>
             <p className={styles.status}>Active prototype</p>
           </div>
 
@@ -51,11 +51,13 @@ function ResetWithContext() {
 
               <div className={styles.summaryGroup}>
                 <p className={styles.summary}>
-                  AI-assisted teams are creating decisions, assumptions, fixes, and architecture history inside private chats. None of that becomes reliable project memory.
+                  AI-assisted teams are creating decisions, assumptions, fixes, 
+                  and architecture history inside private chats. None of that becomes reliable project memory.
                 </p>
 
                 <p className={styles.summary}>  
-                  It helps developers and teams preserve decisions, corrections, superseded approaches, active context, and handoffs across tools, sessions, and time.
+                  It helps developers and teams preserve decisions, corrections, superseded approaches, 
+                  active context, and handoffs across tools, sessions, and time.
                 </p>
               </div>
             </div>
@@ -84,9 +86,9 @@ function ResetWithContext() {
           </figcaption>
         </figure>
 
-        <p className={styles.supportText}></p>
+        <p className={styles.supportText}>
           RWC starts as a local-first continuity and provenance layer for one developer, 
-          but the long-term direction is shared project memory for AI-assisted teams.
+          but the long-term direction is shared project memory for AI-assisted teams.</p>
 
         <div className={styles.buildGrid}>
           <div className={styles.buildCopy}>
@@ -97,7 +99,10 @@ function ResetWithContext() {
             </h3>
 
             <p className={styles.bodyCopy}>
-              The current prototype captures local AI work sessions, extracts early continuity signals, and generates a reviewable handoff for continuing work in a new session. Capture and local storage are working; signal extraction, candidate context, and resolution are being actively tested.F
+              The current prototype captures local AI work sessions, extracts early continuity signals, 
+              and generates a reviewable handoff for continuing work in a new session. 
+              Capture and local storage are working; signal extraction, candidate context, 
+              and resolution are being actively tested.
             </p>
           </div>
 
@@ -135,10 +140,17 @@ function ResetWithContext() {
             reasoning history.
           </p>
           <p className={styles.supportLine}>A continuity layer for decisions, corrections, handoffs, and source-linked project context.</p>
-
-          <p className={styles.technology}>
+         
+          <div className={styles.projectLinks}>
+             <p className={styles.technology}>
+             <p className={styles.label}>Selected technology</p>
             JavaScript / Browser extension / IndexedDB / Local-first
           </p>
+            <a href="#contact">
+              Request a private walkthrough
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </footer>
       </div>
     </section>
