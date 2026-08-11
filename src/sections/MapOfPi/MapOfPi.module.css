@@ -297,7 +297,7 @@
 .contributionList li {
   display: grid;
   grid-template-columns: 2.5rem minmax(0, 1fr);
-  gap: var(--space-2);
+  /* gap: var(--space-2); */
 
   padding-block: 1.15rem;
   
@@ -323,7 +323,7 @@
 
   padding-top: var(--space-8);
 
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border-strong);
 }
 
 .technologyGroup {
@@ -351,7 +351,7 @@
   align-items: center;
   gap: var(--space-2);
 
-  padding-bottom: var(--space-2);
+  /* padding-bottom: var(--space-2); */
 
   font-size: var(--text-sm);
   font-weight: 500;
