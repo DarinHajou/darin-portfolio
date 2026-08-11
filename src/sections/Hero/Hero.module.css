@@ -40,7 +40,37 @@
   display: grid;
   gap: clamp(3rem, 6vw, 6rem);
 }
+.hero::after {
+  content: "";
 
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  height: 1px;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-accent-muted),
+    transparent
+  );
+
+  animation: scan 9s linear infinite;
+}
+
+@keyframes scan {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100svh);
+  }
+}
 .metaRow {
   padding-top: var(--space-8);
   border-top: 1px solid var(--color-border-strong);
@@ -95,12 +125,12 @@
   line-height: 1.35;
   letter-spacing: -0.025em;
   color: var(--color-text-secondary);
-  left: 4.6rem;
+  left: 5.6rem;
   position: relative;
 }
 
 .title {
-  font-size: clamp(3.5rem, 6.6vw, 7.4rem);
+  font-size: clamp(4.3rem, 6.3vw, 5.4rem);
   font-weight: 500;
   line-height: 0.9;
   letter-spacing: -0.06em;
@@ -480,16 +510,19 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .previewImage,
-  .heroLink span,
-  .primaryLink span {
-    transition: none;
+  @media (prefers-reduced-motion: reduce) {
+    .previewImage,
+    .heroLink span,
+    .primaryLink span {
+      transition: none;
+    }
+    .hero::after {
+      animation: none;
+    }
   }
-}
 
-@media (min-width: 768px) {
-  .heroLink {
-    margin-top: -1rem;
+  @media (min-width: 768px) {
+    .heroLink {
+      margin-top: -1rem;
+    }
   }
-}

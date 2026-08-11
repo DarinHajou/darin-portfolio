@@ -23,7 +23,7 @@ function Hero() {
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
       <div className={styles.grid} aria-hidden="true" />
-
+      
       <div className={`page-container ${styles.heroInner}`}>
         <div className={styles.metaRow}>
           <p className={styles.eyebrow}>
