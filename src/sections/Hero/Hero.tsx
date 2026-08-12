@@ -89,7 +89,7 @@ function Hero() {
             <div className={styles.previewViewport}>
               <img
                 className={styles.previewImage}
-                src="/mop-new.png"
+                src="/mop-new3.png"
                 alt="Map of Pi commerce platform preview"
               />
             </div>
