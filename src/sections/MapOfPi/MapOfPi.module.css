@@ -278,7 +278,6 @@
 }
 
 .contributionsHeader > p:last-child {
-  /* max-width: 34rem; */
   font-size: var(--text-base);
   line-height: 1.6;
   color: var(--color-text-secondary);
@@ -297,10 +296,6 @@
 .contributionList li {
   display: grid;
   grid-template-columns: 2.5rem minmax(0, 1fr);
-  /* gap: var(--space-2); */
-
-  padding-block: 1.15rem;
-  
 }
 
 .contributionList span {
