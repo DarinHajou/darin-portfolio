@@ -3,6 +3,7 @@ import Navigation from "./components/Navigation/Navigation";
 import Hero from "./sections/Hero/Hero";
 import MapOfPi from "./sections/MapOfPi/MapOfPi";
 import ResetWithContext from "./sections/ResetWithContext/ResetWithContext";
+import Whisper from './sections/Whisper/Whisper';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <MapOfPi />
 
         <ResetWithContext/>
+
+        <Whisper />
 
         <section id="about" className="page-container page-section">
           <h2 className="heading-section">About</h2>
