@@ -110,13 +110,16 @@
 
 .mainContent {
   display: grid;
-  gap: var(--space-16);
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: start;
 }
 
 .copy {
   display: grid;
   justify-items: start;
   gap: var(--space-4);
+  
 }
 
 .introLine {
@@ -130,7 +133,7 @@
 }
 
 .title {
-  font-size: clamp(4.3rem, 6.3vw, 5.4rem);
+  font-size: clamp(4rem, 4.6vw, 5.4rem);
   font-weight: 500;
   line-height: 0.9;
   letter-spacing: -0.06em;
@@ -139,19 +142,26 @@
 .titleLine {
   display: block;
 }
-
+.accentInline {
+  display: inline;
+  color: var(--color-accent);
+}
 .accentText {
   color: var(--color-accent);
   text-shadow: 0 0 2.5rem var(--color-accent-soft);
+   display: inline;
+   color: var(--color-accent);
 }
 
 .summary {
   max-width: 34rem;
- margin: var(--space-2) auto 0 auto; 
+  margin: var(--space-2); 
 
   font-size: clamp(1rem, 1.15vw, 1.175rem);
   line-height: 1.75;
   color: var(--color-text-secondary);
+  position: relative;
+  top: 18px;
 }
 
 .heroLink,
@@ -200,7 +210,8 @@
 
 .personalNote {
   position: relative;
-
+  top: 2rem;
+  right: 1.5rem;
   width: 100%;
   max-width: 29rem;
   padding-left: var(--space-6);
@@ -225,7 +236,7 @@
 
 .noteLabel {
   display: inline-block;
-
+  font-weight: 700;
   padding: var(--space-1) var(--space-2);
   margin-bottom: var(--space-4);
 
@@ -234,7 +245,7 @@
 }
 
 .noteText {
-  max-width: 25rem;
+  min-width: 17rem;
 
   font-size: var(--text-base);
   line-height: 1.75;
@@ -428,7 +439,9 @@
     column-gap: var(--space-6);
     align-items: end;
   }
-
+  .summary {
+    max-width: 32rem;
+  }
   .copy {
     grid-column: 1 / 9;
   }
@@ -441,6 +454,9 @@
     margin-left: 0.8rem;
     max-width: 27ch;
   }
+.secondLine {
+    white-space: nowrap;
+}
 
   .workShowcase {
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -523,6 +539,8 @@
 
   @media (min-width: 768px) {
     .heroLink {
-      margin-top: -1rem;
+      position: relative;
+      top: 2.5rem;
+      margin-bottom: 3rem;
     }
   }
