@@ -11,7 +11,7 @@ const selectedWork = [
   },
   {
     index: "03",
-    title: "Whisper",
+    title: "Whispr",
   },
   {
     index: "04",
@@ -51,7 +51,8 @@ function Hero() {
             </h1>
 
             <p className={styles.summary}>
-              My focus is frontend, but I work across the full product—from interface and user flows to backend services, data, payments, integrations, and business logic.
+              Frontend-focused full-stack developer building polished interfaces
+              and the services, payments, and data flows behind them.
             </p>
 
             <a className={styles.heroLink} href="#work">
