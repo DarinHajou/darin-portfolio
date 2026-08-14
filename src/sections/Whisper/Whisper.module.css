@@ -119,6 +119,9 @@
   line-height: 1.72;
   color: var(--color-text-secondary);
 }
+.whisperText {
+  color: #ffc542;
+}
 .noteLabel {
   color: #ffc542;
 }
@@ -187,17 +190,27 @@
   gap: var(--space-6);
 }
 
-.subheading {
+.subheading, .subheadingChoose {
   max-width: 15ch;
-
   font-size: clamp(2rem, 3.4vw, 3.75rem);
   font-weight: 500;
   line-height: 1.03;
   letter-spacing: -0.025em;
-
   text-wrap: balance;
 }
-
+.subheadingChoose {
+  background: linear-gradient(
+    90deg,
+    #f472b6 0%,
+    #f472b6 8%,
+    #ffffff 38%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #ffffff;
+}
 .bodyCopy {
   max-width: 35rem;
 
@@ -205,8 +218,37 @@
   line-height: 1.78;
   color: var(--color-text-secondary);
 }
+
+.welcomeVideo {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 26rem;
+
+  object-fit: contain;
+}
+
+.productVideo {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  max-height: 44rem;
+
+  object-fit: contain;
+}
 .longingText {
   color: #F472B6;
+}
+.secondLongingText {
+  color: #F472B6;
+}
+
+.deep, .soft {
+  color: #ffffff;
 }
 
 .figure {
@@ -314,7 +356,7 @@
   display: grid;
   place-items: center;
 
-  max-height: 32rem;
+  max-height: 48rem;
   padding: clamp(1rem, 2.5vw, 2rem);
 }
 
@@ -439,6 +481,7 @@
 
 .refineFigure {
   padding-top: var(--space-6);
+  /* border: 2px solid red; */
 }
 
 .refineFrame {
@@ -569,7 +612,7 @@
   }
 
   .welcomeFigure {
-    grid-column: 5 / -1;
+    grid-column: 6 / 16;
   }
 
 
@@ -598,6 +641,7 @@
 /* Images share the row underneath */
 .firstSpread .cravingFigure {
   grid-column: 1 / 7;
+   border: 2px solid red;
 }
 
 .firstSpread .intensityFigure {
@@ -607,6 +651,8 @@
   .cravingFigure .productFrame,
   .intensityFigure .productFrame {
     min-height: 42rem;
+    max-width: 20rem;
+
   }
 
 
@@ -698,7 +744,8 @@
 
   .cravingFigure .productFrame,
   .intensityFigure .productFrame {
-    min-height: 36rem;
+    min-height: 48rem;
+    max-width: 26rem;
   }
 
   .curationSection {

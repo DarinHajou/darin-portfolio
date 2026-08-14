@@ -36,7 +36,7 @@ function Whisper() {
               </h2>
 
               <p className={styles.summary}>
-                I started Whispr to learn what it actually means to integrate AI
+                I started <span className={styles.whisperText}>Whispr</span> to learn what it actually means to integrate AI
                 into a product — and to make something that felt considered all
                 the way through. The experiment became less about generating
                 movie recommendations and more about designing an interface for
@@ -82,12 +82,18 @@ function Whisper() {
           </div>
 
           <figure className={`${styles.figure} ${styles.welcomeFigure}`}>
-            <div className={styles.welcomeFrame}>
-              <img
-                className={styles.welcomeImage}
-                src="/whisper-landing.png"
-                alt="Whispr opening experience asking what the user is craving"
-              />
+             <div className={styles.welcomeFrame}>
+              <video
+                className={styles.welcomeVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/whisper-landing.png"
+              >
+                <source src="/landing2.mp4" type="video/mp4" />
+              </video>
             </div>
 
             <figcaption className={styles.visualCaption}>
@@ -103,7 +109,7 @@ function Whisper() {
           <div className={styles.spreadCopy}>
             <p className={styles.sectionLabel}>01 / Emotional input</p>
 
-            <h3 className={styles.subheading}>
+            <h3 className={styles.subheadingChoose}>
               Choose the feeling before the film.
             </h3>
 
@@ -114,19 +120,25 @@ function Whisper() {
             </p>
 
             <p className={styles.bodyCopy}>
-              <span className={styles.longingText}>Longing</span> + Soft &amp; Gentle should lead somewhere meaningfully
-              different from Longing + Deep &amp; Intense. The emotional input
+              <span className={styles.longingText}>Longing</span> + <span className={styles.soft}>Soft &amp; Gentle</span> should lead somewhere meaningfully
+              different from <span className={styles.secondLongingText}>Longing</span> + <span className={styles.deep}>Deep &amp; Intense.</span> The emotional input
               is not decoration around the search — it is the search.
             </p>
           </div>
 
           <figure className={`${styles.figure} ${styles.cravingFigure}`}>
             <div className={styles.productFrame}>
-              <img
-                className={styles.productImage}
-                src="/whispr-cravings.png"
-                alt="Whispr craving selection showing six glowing emotional choices"
-              />
+             <video
+                className={styles.productVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/cravings.png"
+              >
+                <source src="/craving.mp4" type="video/mp4" />
+              </video>
             </div>
 
             <figcaption className={styles.visualCaption}>
@@ -137,11 +149,17 @@ function Whisper() {
 
           <figure className={`${styles.figure} ${styles.intensityFigure}`}>
             <div className={styles.productFrame}>
-              <img
-                className={styles.productImage}
-                src="/whispr-intensity.png"
-                alt="Whispr intensity screen asking how deeply the selected craving should shape the recommendation"
-              />
+              <video
+                className={styles.productVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/intensity.png"
+              >
+                <source src="/intensity.mp4" type="video/mp4" />
+              </video>
             </div>
 
             <figcaption className={styles.visualCaption}>
