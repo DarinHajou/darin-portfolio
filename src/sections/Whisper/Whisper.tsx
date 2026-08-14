@@ -137,7 +137,7 @@ function Whisper() {
                 preload="metadata"
                 poster="/cravings.png"
               >
-                <source src="/craving.mp4" type="video/mp4" />
+                <source src="/craving3.mp4" type="video/mp4" />
               </video>
             </div>
 
@@ -207,7 +207,7 @@ function Whisper() {
             <div className={styles.productFrame}>
               <img
                 className={styles.productImage}
-                src="/whispr-result.png"
+                src="/results.png"
                 alt="Whispr presenting a film selected from the user's emotional intent"
               />
             </div>
@@ -246,7 +246,7 @@ function Whisper() {
               <div className={styles.refineFrame}>
                 <img
                   className={styles.refineImage}
-                  src="/whispr-refine.png"
+                  src="/refine.png"
                   alt="Whispr controls for shifting the recommendation toward lighter, darker, newer, more obscure, or more surprising films"
                 />
               </div>
