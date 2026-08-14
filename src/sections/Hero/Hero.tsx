@@ -36,18 +36,19 @@ function Hero() {
           <div className={styles.copy}>
             <p className={styles.introLine}>Hi, I’m Darin.</p>
 
-           <h1 id="hero-title" className={styles.title}>
-  <span className={styles.titleLine}>
-    I build the interface —
-  </span>
+            <h1 id="hero-title" className={styles.title}>
+              <span className={styles.titleLine}>
+                I build the
+              </span>
 
-  <span className={`${styles.titleLine} ${styles.secondLine}`}>
-    and the{" "}
-    <span className={styles.accentInline}>
-      systems behind it.
-    </span>
-  </span>
-</h1>
+              <span className={styles.titleLine}>
+                interface and the
+              </span>
+
+              <span className={`${styles.titleLine} ${styles.accentText}`}>
+                systems behind it.
+              </span>
+            </h1>
 
             <p className={styles.summary}>
               My focus is frontend, but I work across the full product—from interface and user flows to backend services, data, payments, integrations, and business logic.
