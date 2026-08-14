@@ -85,7 +85,7 @@ function MapOfPi() {
               <div className={styles.walkthroughFrame}>
                 <video
                   className={styles.walkthroughVideo}
-                  src="/pi-video.mp4"
+                  src="/pi-video1.mp4"
                   poster="/map-of-pi.png"
                   autoPlay
                   muted
