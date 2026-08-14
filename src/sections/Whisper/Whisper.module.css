@@ -108,6 +108,10 @@
   letter-spacing: -0.06em;
 }
 
+.title:hover {
+  color: #FFC542;
+}
+
 .summary {
   max-width: 50rem;
 
@@ -115,7 +119,9 @@
   line-height: 1.72;
   color: var(--color-text-secondary);
 }
-
+.noteLabel {
+  color: #ffc542;
+}
 .marginNote {
   position: relative;
 
@@ -166,9 +172,8 @@
 .thesisStatement {
   max-width: 19ch;
   font-size: clamp(2.25rem, 5vw, 5.75rem);
-  font-weight: 500;
   line-height: 0.98;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.015em;
 }
 
 
@@ -199,6 +204,9 @@
   font-size: var(--text-base);
   line-height: 1.78;
   color: var(--color-text-secondary);
+}
+.longingText {
+  color: #F472B6;
 }
 
 .figure {
@@ -265,7 +273,7 @@
   height: auto;
 
   max-width: 100%;
-  max-height: 32rem;
+  max-height: 26rem;
 
   object-fit: contain;
 }
@@ -306,7 +314,7 @@
   display: grid;
   place-items: center;
 
-  min-height: 32rem;
+  max-height: 32rem;
   padding: clamp(1rem, 2.5vw, 2rem);
 }
 
@@ -532,10 +540,11 @@
   }
 
   .thesis .sectionLabel {
-    grid-column: 2 / 4;
+    grid-column:  1 / 4;
     align-self: center;
 
     font-size: var(--text-sm);
+    margin-left: 2rem;
   }
 
   .thesisStatement {
@@ -546,7 +555,6 @@
 
     text-wrap: balance;
   }
-
 
   /* WELCOME */
 
@@ -690,7 +698,7 @@
 
   .cravingFigure .productFrame,
   .intensityFigure .productFrame {
-    min-height: 46rem;
+    min-height: 36rem;
   }
 
   .curationSection {

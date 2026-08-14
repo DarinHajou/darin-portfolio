@@ -57,12 +57,12 @@ function Whisper() {
         </header>
 
         <div className={styles.thesis}>
-          <p className={styles.sectionLabel}>The idea</p>
 
-          <p className={styles.thesisStatement}>
-            People do not always know which film they want. They often know what
-            they want a film to do to them.
+          <p className={styles.sectionLabel}>The idea</p>
+          <p className={styles.thesisStatement}> 
+            People do not always know which film they want. <br /> <br /> <span className={styles.thesisStatementSecond}> They often know what they want a film to do to them</span>
           </p>
+      
         </div>
 
         <div className={styles.welcomeSection}>
@@ -114,7 +114,7 @@ function Whisper() {
             </p>
 
             <p className={styles.bodyCopy}>
-              Longing + Soft &amp; Gentle should lead somewhere meaningfully
+              <span className={styles.longingText}>Longing</span> + Soft &amp; Gentle should lead somewhere meaningfully
               different from Longing + Deep &amp; Intense. The emotional input
               is not decoration around the search — it is the search.
             </p>
