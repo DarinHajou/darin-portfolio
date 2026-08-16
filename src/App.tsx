@@ -1,9 +1,10 @@
 import './App.css'
-import Navigation from "./components/Navigation/Navigation";
-import Hero from "./sections/Hero/Hero";
-import MapOfPi from "./sections/MapOfPi/MapOfPi";
-import ResetWithContext from "./sections/ResetWithContext/ResetWithContext";
-import Whisper from './sections/Whisper/Whisper';
+import Navigation from './sections/Navigation/Navigation';
+import Hero from './sections/Hero/Hero';
+import MapOfPi from './projects/MapOfPi/MapOfPi';
+import ResetWithContext from "./projects/ResetWithContext/ResetWithContext";
+import Whisper from './projects/Whisper/Whisper';
+import ProjectMedia from './components/ProjectMedia/ProjectMedia';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <ResetWithContext/>
 
         <Whisper />
+        <ProjectMedia />
 
         <section id="about" className="page-container page-section">
           <h2 className="heading-section">About</h2>

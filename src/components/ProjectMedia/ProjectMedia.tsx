@@ -2,8 +2,8 @@ import { useRef, useState } from "react";
 import styles from "./ProjectMedia.module.css";
 
 type ProjectMediaProps = {
-  title: string;
-  index: string;
+  title?: string;
+  index?: string;
   imageSrc?: string;
   videoSrc?: string;
   posterSrc?: string;

@@ -1,12 +1,12 @@
 :root {
   /* Colors */
   --color-bg: #121412;
-  --color-bg-deep: #090a0b;
+  --color-bg-deepzz: #090a0b;
   --color-surface: #141619;
 
   --color-text-primary: #EBECE8;
-  --color-text-secondary: #a3a29d;
-  --color-text-muted: #979A95;
+  --color-text-secondary: #b3b2ad;
+  --color-text-muted: #b0b3ae;
 
   --color-border: rgb(241 239 233 / 12%);
   --color-border-strong: rgb(241 239 233 / 22%);
