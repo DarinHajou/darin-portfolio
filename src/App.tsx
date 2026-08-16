@@ -4,7 +4,6 @@ import Hero from './sections/Hero/Hero';
 import MapOfPi from './projects/MapOfPi/MapOfPi';
 import ResetWithContext from "./projects/ResetWithContext/ResetWithContext";
 import Whisper from './projects/Whisper/Whisper';
-import ProjectMedia from './components/ProjectMedia/ProjectMedia';
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
         <ResetWithContext/>
 
         <Whisper />
-        <ProjectMedia />
 
         <section id="about" className="page-container page-section">
           <h2 className="heading-section">About</h2>
