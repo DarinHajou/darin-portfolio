@@ -1,4 +1,4 @@
-import styles from "./Whisper.module.css";
+import styles from "./Whispr.module.css";
 
 const cravings = [
   { name: "Comfort", descriptor: "Warm / steady", className: styles.comfort },
