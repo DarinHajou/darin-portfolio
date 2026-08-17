@@ -5,9 +5,12 @@ import App from './App.tsx'
 import "./styles/tokens.css";
 import "./styles/global.css";
 import "./styles/typography.css";
+import { BrowserRouter } from 'react-router-dom';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <BrowserRouter>
     <App />
-  </StrictMode>,
+  </BrowserRouter>
+  </StrictMode>
 )
