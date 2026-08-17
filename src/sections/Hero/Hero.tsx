@@ -1,21 +1,24 @@
 import styles from "./Hero.module.css";
+import { Link } from "react-router-dom";
 
 const selectedWork = [
   {
     index: "01",
     title: "Map of Pi",
+    link: "/Projects/map-of-pi",
   },
   {
     index: "02",
     title: "Reset with Context",
+    link: "/Projects/reset-with-context",
   },
   {
     index: "03",
-    title: "Whispr",
+    title: "/ProjectsWhispr",
   },
   {
     index: "04",
-    title: "Bosant",
+    title: "/ProjectsBosant",
   },
 ];
 
@@ -56,7 +59,7 @@ function Hero() {
             </p>
 
             <a className={styles.heroLink} href="#work">
-              View selected work
+              View selected 
               <span aria-hidden="true">↘</span>
             </a>
           </div>
@@ -114,8 +117,11 @@ function Hero() {
                   }`}
                   key={project.title}
                 >
-                  <span className={styles.workNumber}>{project.index}</span>
-                  <span className={styles.workTitle}>{project.title}</span>
+                  <Link to={project.link}>
+                  
+                    <span className={styles.workNumber}>{project.index}</span>
+                    <span className={styles.workTitle}>{project.title}</span>
+                  </Link>
                 </li>
               ))}
             </ol>
