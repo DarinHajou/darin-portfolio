@@ -8,8 +8,8 @@ export function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/projects/MapOfPi" element={<MapOfPi />} />
-      <Route path="/projects/ResetWithContext" element={<ResetWithContext />} />;
+      <Route path="/projects/map-Of-Pi" element={<MapOfPi />} />
+      <Route path="/projects/reset-with-context" element={<ResetWithContext />} />;
       <Route path="/projects/Whispr" element={<Whispr />} />
     </Routes>
   )
