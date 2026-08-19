@@ -14,11 +14,13 @@ const selectedWork = [
   },
   {
     index: "03",
-    title: "/ProjectsWhispr",
+    title: "Whispr",
+    link: "/Projects/whispr",
   },
   {
     index: "04",
-    title: "/ProjectsBosant",
+    title: "Bosant",
+    link: "/Projects/bosant"
   },
 ];
 
@@ -117,8 +119,7 @@ function Hero() {
                   }`}
                   key={project.title}
                 >
-                  <Link to={project.link}>
-                  
+                  <Link to={project.link} className={styles.workItemLink}>
                     <span className={styles.workNumber}>{project.index}</span>
                     <span className={styles.workTitle}>{project.title}</span>
                   </Link>
