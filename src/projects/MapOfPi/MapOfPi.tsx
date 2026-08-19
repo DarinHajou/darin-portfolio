@@ -1,4 +1,5 @@
 import styles from "./MapOfPi.module.css";
+import { Link } from "react-router-dom";
 
 const contributions = [
   "Membership & referrals — tier and allowance architecture",
@@ -34,8 +35,10 @@ function MapOfPi() {
       <div className={`page-container ${styles.inner}`}>
         <header className={styles.projectHeader}>
           <div className={styles.meta}>
-            <p className="label">01 / Selected work</p>
-            <p className={styles.status}>Live platform</p>
+            <Link to={"/"}>
+            <p className="label"> ← Back to work</p>
+            </Link>
+            <p className={styles.status}>Selected Work: 01 / 04</p>
           </div>
 
           <div className={styles.projectLead}>
@@ -105,7 +108,7 @@ function MapOfPi() {
 
               <figcaption className={styles.walkthroughCaption}>
                 <span>Product walkthrough</span>
-                <span>01 / Live</span>
+                <span className={styles.status}>01 / Live platform</span>
               </figcaption>
             </figure>
           </div>
@@ -171,7 +174,7 @@ function MapOfPi() {
 
           <figcaption className={styles.testimonyCaption}>
             <span>Product testimony</span>
-            <span>01 / Live</span>
+            <span className={styles.status}>01 / Live platform</span>
           </figcaption>
         </figure>
         </section>
@@ -191,6 +194,9 @@ function MapOfPi() {
             </a>
           </div>
         </footer>
+        <div className={styles.browseProjects}>
+          <p className={styles.nextLabel}>Next project →</p>
+        </div>
       </div>
     </section>
   );
