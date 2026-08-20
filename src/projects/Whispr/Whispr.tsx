@@ -132,7 +132,7 @@ function Whisper() {
                 preload="metadata"
                 poster="/cravings.png"
               >
-                <source src="/craving3.mp4" type="video/mp4" />
+                <source src="/whispr-cravings.mp4" type="video/mp4" />
               </video>
             </div>
             <figcaption className={styles.visualCaption}>
@@ -150,9 +150,9 @@ function Whisper() {
                 loop
                 playsInline
                 preload="metadata"
-                poster="/intensity.png"
+                poster="/whispr-intensity.png"
               >
-                <source src="/intensity.mp4" type="video/mp4" />
+                <source src="/whispr-intensity.mp4" type="video/mp4" />
               </video>
             </div>
             <figcaption className={styles.visualCaption}>
@@ -198,10 +198,12 @@ function Whisper() {
               One pick first. Then steer it.
             </h3>
             <p className={styles.bodyCopy}>
-              <span className={styles.accentText}>Sol</span> starts by choosing one film rather than giving you another long list of option
+              <span className={styles.accentText}>Sol</span> 
+              starts by choosing one film rather than giving you another long list of option
             </p>
             <p className={styles.bodyCopy}>
-              If it feels close but not quite right, you can steer the recommendation lighter, darker, more obscure, more recent, or more surprising — while keeping the craving you started with.
+              If it feels close but not quite right, you can steer the recommendation 
+              lighter, darker, more obscure, more recent, or more surprising — while keeping the craving you started with.
             </p>
 
             
@@ -211,6 +213,22 @@ function Whisper() {
                 <img
                   className={styles.resultsImage}
                   src="/results.png"
+                  alt="Whispr presenting a film selected from the user's emotional intent"
+                />
+              </div>
+              <figcaption className={styles.visualCaption}>
+                <span>
+                  <span className={styles.accentText}>Sol&apos;s</span>{" "}
+                  interpretation
+                </span>
+                <span>03 / One recommendation first</span>
+              </figcaption>
+            </figure>
+            <figure className={styles.refineFigure}>
+              <div className={styles.refineFrame}>
+                <img
+                  className={styles.refineImage}
+                  src="/refine.png"
                   alt="Whispr presenting a film selected from the user's emotional intent"
                 />
               </div>
@@ -245,9 +263,8 @@ function Whisper() {
                   Ask  <span className={styles.accentText}>Sol</span> when you want to go deeper.
                 </h3>
                 <p className={styles.bodyCopy}>
-                  <span className={styles.accentText}>Sol</span> already knows your craving, intensity, and recommendations.
-                </p>
-                <p className={styles.bodyCopy}>
+                  <span className={styles.accentText}>Sol</span>&nbsp;  
+                  already knows your craving, intensity, and recommendations.
                   Ask why a film fits, compare options, or describe what still feels off — without starting over.
                 </p>
               </div>
@@ -256,7 +273,7 @@ function Whisper() {
               <div className={styles.chatFrame}>
                 <img
                   className={styles.chatImage}
-                  src="/refine.png"
+                  src="/chat.png"
                   alt="Whispr controls for shifting the recommendation toward lighter, darker, newer, more obscure, or more surprising films"
                 />
               </div>

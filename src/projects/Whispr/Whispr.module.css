@@ -71,6 +71,7 @@
 }
 
 .bodyCopy {
+  position: relative;
   max-width: 35rem;
   font-size: var(--text-base);
   line-height: 1.78;
@@ -294,7 +295,7 @@
   }
 
   .welcomeFigure {
-    grid-column: 6 / span 7;
+    grid-column: 6 / span 6;
   }
 }
 
@@ -414,7 +415,7 @@
   .intensityFigure .resultsVideo {
     width: 100%;
     height: auto;
-    max-height: none;
+    min-height: 46rem;
   }
 }
 
@@ -596,7 +597,7 @@
 }
 .chatCopy {
   display: grid;
-  /* align-content: center; */
+  align-content: center;
   gap: var(--space-6);
 }
 
@@ -623,7 +624,7 @@
   height: 100%;
   object-fit: fill;
   object-position: center 72%;
-  /* aspect-ratio: 1 / 2; */
+  aspect-ratio: 19 / 16;
   
 }
 
@@ -636,12 +637,15 @@
   }
 .refineFigure {
   grid-column: 1 / span 6 ;
-  transform: translateY(-8rem);
-  min-height: 30rem;
+  transform: translateY(-10rem);
+  max-height: 18rem;
 }
 
   .resultsFigure {
     grid-column: 1 / span 6;
+  }
+  .chatFigure {
+    grid-column: 3 / span 4;
   }
 
   .curationCopy {
@@ -667,7 +671,7 @@
   .chatCopy {
     grid-column: 3 / span 8;
     /* transform: translateY(-3rem); */
-    /* text-align: left; */
+    text-align: center;
   }
 }
 
