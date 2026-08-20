@@ -194,9 +194,9 @@ function MapOfPi() {
             </a>
           </div>
         </footer>
-        <div className={styles.browseProjects}>
+        <Link to="/Projects/reset-with-context" className={styles.browseProjects}>
           <p className={styles.nextLabel}>Next project →</p>
-        </div>
+        </Link>
       </div>
     </section>
   );
