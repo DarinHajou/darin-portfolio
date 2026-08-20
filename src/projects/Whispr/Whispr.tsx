@@ -165,10 +165,15 @@ function Whisper() {
         <div className={styles.paletteSection}>
           <div className={styles.paletteHeading}>
             <p className={styles.sectionLabel}>Emotional vocabulary</p>
-            <p className={styles.paletteIntro}>
-              Color and motion belong to the selected emotion, while the
-              portfolio itself stays neutral.
-            </p>
+            <div className={styles.paletteIntro}>
+              <p>
+                <span className={styles.colorWord}>Color</span> carries the feeling.
+              </p>
+
+              <p>
+                <span className={styles.motionWord}>Motion</span> gives it life.
+              </p>
+            </div>
           </div>
 
           <ol className={styles.paletteList}>

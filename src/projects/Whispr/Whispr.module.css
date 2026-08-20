@@ -436,8 +436,74 @@
 
 .paletteIntro {
   max-width: 38rem;
-  line-height: 1.7;
+
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+
   color: var(--color-text-secondary);
+}
+
+.paletteIntro p {
+  margin: 0;
+}
+
+
+/* Cycle through Whispr's emotional palette */
+.colorWord {
+  font-weight: 500;
+
+  animation: cravingColorCycle 10s ease-in-out infinite;
+}
+
+@keyframes cravingColorCycle {
+  0%,
+  100% {
+    color: var(--whispr-comfort);
+  }
+
+  17% {
+    color: var(--whispr-escape);
+  }
+
+  34% {
+    color: var(--whispr-thrill);
+  }
+
+  51% {
+    color: var(--whispr-longing);
+  }
+
+  68% {
+    color: var(--whispr-release);
+  }
+
+  85% {
+    color: var(--whispr-wonder);
+  }
+}
+
+/* Very small physical movement */
+.motionWord {
+  display: inline-block;
+
+  font-weight: 500;
+  color: var(--color-text-primary);
+
+  animation: motionWord 2.8s ease-in-out infinite;
+}
+
+@keyframes motionWord {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    letter-spacing: 0;
+  }
+
+  50% {
+    transform: translateY(-2px) scale(1.025);
+    letter-spacing: 0.015em;
+  }
 }
 
 .paletteList {
@@ -751,5 +817,15 @@
 
   .visualCaption span:last-child {
     text-align: left;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .colorWord,
+  .motionWord {
+    animation: none;
+  }
+
+  .colorWord {
+    color: var(--whispr-longing);
   }
 }
