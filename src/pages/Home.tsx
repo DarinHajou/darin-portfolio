@@ -8,8 +8,8 @@ function Home() {
     <>
       <Navigation />
       <Hero />
-     <About />
-     <Contact />
+      <About />
+      <Contact />
     </>
   );
 }
