@@ -3,6 +3,7 @@ import ResetWithContext from "./projects/ResetWithContext/ResetWithContext";
 import MapOfPi from "./projects/MapOfPi/MapOfPi";
 import Whispr from "./projects/Whispr/Whispr";
 import Home from "./pages/Home";
+import Bosant from "./projects/Bosant/Bosant";
 
 export function AppRoutes() {
   return (
@@ -11,6 +12,7 @@ export function AppRoutes() {
       <Route path="/projects/map-Of-Pi" element={<MapOfPi />} />
       <Route path="/projects/reset-with-context" element={<ResetWithContext />} />;
       <Route path="/projects/Whispr" element={<Whispr />} />
+      <Route path="/projects/Bosant" element={<Bosant />} />
     </Routes>
   )
 }
