@@ -12,13 +12,13 @@ function Bosant() {
         <header className={styles.header}>
           <div className={styles.meta}>
             <p>04 / Selected work</p>
-            <p className={styles.status}>Private draft / Shopify direction</p>
+            <p className={styles.status}>Draft concept / In development</p>
           </div>
 
           <div className={styles.intro}>
             <div className={styles.introCopy}>
               <p className={styles.projectType}>
-                Premium e-commerce / Digital brand direction
+                E-commerce / Digital brand direction
               </p>
 
               <h2 id="bosant-title" className={styles.title}>
@@ -26,9 +26,9 @@ function Bosant() {
               </h2>
 
               <p className={styles.summary}>
-                A homepage direction for Bosant, a premium bedding retailer in
-                Oslo — shaped to make the online store feel calmer, warmer and
-                closer to the physical product experience.
+                A new homepage direction for an established premium bedding
+                retailer in Oslo — designed to better translate the character
+                of the physical brand into a more coherent digital experience.
               </p>
             </div>
 
@@ -36,14 +36,9 @@ function Bosant() {
               <p className={styles.noteLabel}>The brief</p>
 
               <p className={styles.noteText}>
-                Bosant already had the product quality. The task was to make the storefront
-                feel closer to it — calmer, softer and more deliberate, without losing its
-                commercial purpose.
-              </p>
-
-              <p className={styles.draftNote}>
-                The concept is a private draft direction and has not been
-                published to the live storefront.
+                The task was not simply to restyle individual components. It
+                meant reconsidering typography, hierarchy, imagery,
+                merchandising and interaction as one connected brand system.
               </p>
             </aside>
           </div>
@@ -77,19 +72,20 @@ function Bosant() {
             <p className={styles.sectionLabel}>Designing the system</p>
 
             <h3 className={styles.subheading}>
-              A quieter storefront built around comfort, material quality and
-              restraint.
+              A calmer storefront built around comfort, material and restraint.
             </h3>
 
             <p className={styles.bodyCopy}>
-              The direction treats the homepage as one connected brand surface.
-              Typography, spacing, warm neutral backgrounds, product imagery
-              and trust details work together to create a calmer retail
-              experience without losing clarity or commercial focus.
+              The direction was developed systematically rather than component
+              by component. Typography, spacing, imagery, soft surfaces and
+              product language all work toward the same quieter premium
+              identity.
             </p>
           </div>
 
-          <figure className={`${styles.figure} ${styles.selectionFigure}`}>
+          <figure
+            className={`${styles.figure} ${styles.selectionFigure}`}
+          >
             <div className={styles.imageFrame}>
               <img
                 className={styles.image}
@@ -103,21 +99,6 @@ function Bosant() {
               <span>02 / Merchandising</span>
             </figcaption>
           </figure>
-
-          <figure className={`${styles.figure} ${styles.tencelFigure}`}>
-            <div className={styles.imageFrame}>
-              <img
-                className={styles.image}
-                src="/bosant-collection.png"
-                alt="Bosant Tencel Blend brand storytelling section"
-              />
-            </div>
-
-            <figcaption className={styles.visualCaption}>
-              <span>Material storytelling</span>
-              <span>03 / Product value</span>
-            </figcaption>
-          </figure>
         </div>
 
         {/* BUSINESS / SHOPIFY */}
@@ -126,14 +107,14 @@ function Bosant() {
             <p className={styles.sectionLabel}>Design within the business</p>
 
             <h3 className={styles.subheading}>
-              A premium direction that still had to work inside real commerce.
+              Brand direction that still has to function as commerce.
             </h3>
 
             <p className={styles.bodyCopy}>
-              The concept had to fit an existing Shopify storefront, not a
-              blank design canvas. That meant working through theme structures,
-              section logic, responsive behaviour and product collections while
-              keeping the brand experience consistent.
+              The concept had to work inside an established Shopify storefront,
+              not an empty design canvas. That meant adapting the direction
+              around existing theme structures, sections, templates and
+              commerce behaviour while preserving the intended visual system.
             </p>
           </div>
 
@@ -141,7 +122,7 @@ function Bosant() {
             <div className={styles.wideFrame}>
               <img
                 className={styles.wideImage}
-                src="/bosant-tencel3.png"
+                src="/bosant-collection.png"
                 alt="Bosant Sara Emilie collection displayed within the Shopify storefront"
               />
             </div>
@@ -159,9 +140,9 @@ function Bosant() {
             <p className={styles.sectionLabel}>Physical to digital</p>
 
             <p className={styles.brandStatement}>
-              The goal was to reduce the gap between what Bosant sells and how
-              the store feels: soft bedding, careful packaging, Scandinavian
-              quality and a more considered sense of comfort.
+              The goal was to make the storefront feel like the same brand the
+              customer encounters in the product, packaging and physical
+              experience.
             </p>
           </div>
 
@@ -181,9 +162,8 @@ function Bosant() {
           <div>
             <p className={styles.footerLabel}>Contribution</p>
             <p>
-              Homepage direction, UI design, digital brand refinement, product
-              storytelling, responsive implementation and Shopify theme
-              integration.
+              Homepage direction, UI design, digital branding, responsive
+              implementation and Shopify theme integration.
             </p>
           </div>
 
