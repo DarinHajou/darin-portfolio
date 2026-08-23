@@ -76,6 +76,16 @@
   border-top: 1px solid var(--color-border-strong);
 
 }
+.title {
+  font-size: clamp(4.3rem, 6.3vw, 5.4rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.titleLine {
+  display: block;
+}
 
 .eyebrow,
 .noteLabel,
@@ -127,17 +137,6 @@
   color: var(--color-text-secondary);
   position: relative;
   left: 1.6rem;
-}
-
-.title {
-  font-size: clamp(4.3rem, 6.3vw, 5.4rem);
-  font-weight: 500;
-  line-height: 0.9;
-  letter-spacing: -0.06em;
-}
-
-.titleLine {
-  display: block;
 }
 
 .accentText {
@@ -312,7 +311,7 @@
   width: 100%;
   height: 100%;
 
-  object-fit: fill;
+  object-fit: contain;
   object-position: center top;
 
   filter: saturate(0.85) contrast(1.05);
@@ -420,7 +419,7 @@
     grid-template-columns: repeat(12, minmax(0, 1fr));
     column-gap: var(--space-6);
   }
-
+  
   .metaRow,
   .mainContent,
   .workShowcase {
@@ -490,34 +489,6 @@
   }
 }
 
-@media (max-width: 560px) {
-  .hero {
-    padding-top: var(--space-8);
-  }
-
-  .eyebrow {
-    align-items: flex-start;
-    font-size: 0.68rem;
-    line-height: 1.6;
-  }
-
-  .metaSignal {
-    margin-top: 0.35rem;
-  }
-
-  .title {
-    font-size: clamp(3.2rem, 16vw, 5rem);
-    line-height: 0.92;
-  }
-
-  .showcaseHeader {
-    align-items: flex-start;
-  }
-
-  .showcaseLabel {
-    max-width: 10rem;
-  }
-}
 
   @media (prefers-reduced-motion: reduce) {
     .previewImage,
