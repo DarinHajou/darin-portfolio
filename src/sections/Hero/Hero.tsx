@@ -1,30 +1,37 @@
 import styles from "./Hero.module.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const selectedWork = [
   {
     index: "01",
     title: "Map of Pi",
     link: "/Projects/map-of-pi",
+    image: "/mop3.png",
   },
   {
     index: "02",
     title: "Reset with Context",
     link: "/Projects/reset-with-context",
+    image: "/rwc-handoff.png",
   },
   {
     index: "03",
     title: "Whispr",
     link: "/Projects/whispr",
+    image:"/whispr-craving.png",
   },
   {
     index: "04",
     title: "Bosant",
-    link: "/Projects/bosant"
+    link: "/Projects/bosant",
+    image: "/bosant-hero.png",
   },
 ];
 
+
 function Hero() {
+  const [preview, setPreview] = useState("/mop3.png"); 
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
       <div className={styles.grid} aria-hidden="true" />
@@ -99,7 +106,7 @@ function Hero() {
             <div className={styles.previewViewport}>
               <img
                 className={styles.previewImage}
-                src="/mop-new3.png"
+                src={preview}
                 alt="Map of Pi commerce platform preview"
               />
             </div>
@@ -114,6 +121,8 @@ function Hero() {
             <ol className={styles.workList}>
               {selectedWork.map((project, projectIndex) => (
                 <li
+                  onMouseEnter={() => setPreview(project.image)}
+                  onMouseLeave={() => setPreview("/mop3.png")}
                   className={`${styles.workItem} ${
                     projectIndex === 0 ? styles.workItemActive : ""
                   }`}
