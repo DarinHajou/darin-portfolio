@@ -110,7 +110,7 @@ function ResetWithContext() {
             <div className={styles.secondaryFrame}>
               <img
                 className={styles.secondaryImage}
-                src="/RWC-handoff.png"
+                src="/rwc-handoff.png"
                 alt="Reset with Context prototype showing active context, corrections, open questions, and a generated handoff"
               />
             </div>
