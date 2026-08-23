@@ -91,7 +91,7 @@ function Whisper() {
               </video>
             </div>
             <figcaption className={styles.visualCaption}>
-              <span>Opening state</span>
+              <span className={styles.openLabel}>Opening state</span>
               <span>
                 <span className={styles.accentText}>Sol</span> / Entry point
               </span>
@@ -136,7 +136,7 @@ function Whisper() {
               </video>
             </div>
             <figcaption className={styles.visualCaption}>
-              <span>Craving system</span>
+              <span className={styles.cravingLabel}>Craving system</span>
               <span>01 / Emotional vocabulary</span>
             </figcaption>
           </figure>
@@ -156,7 +156,7 @@ function Whisper() {
               </video>
             </div>
             <figcaption className={styles.visualCaption}>
-              <span>Intensity</span>
+              <span className={styles.intensityLabel}>Intensity</span>
               <span>02 / Same craving, different night</span>
             </figcaption>
           </figure>
@@ -203,7 +203,7 @@ function Whisper() {
               One pick first. Then steer it.
             </h3>
             <p className={styles.bodyCopy}>
-              <span className={styles.accentText}>Sol</span> 
+              <span className={styles.accentText}>Sol </span> 
               starts by choosing one film rather than giving you another long list of option
             </p>
             <p className={styles.bodyCopy}>
