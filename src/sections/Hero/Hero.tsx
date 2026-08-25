@@ -19,7 +19,7 @@ const selectedWork = [
     index: "03",
     title: "Whispr",
     link: "/Projects/whispr",
-    image:"/whispr-craving.png",
+    image: "/whispr-craving.png",
   },
   {
     index: "04",
@@ -29,13 +29,19 @@ const selectedWork = [
   },
 ];
 
-
 function Hero() {
-  const [preview, setPreview] = useState("/mop3.png"); 
+  const [activeProject, setActiveProject] = useState(0);
+
+  const currentProject = selectedWork[activeProject];
+
+  const nextProject = () => {
+    setActiveProject((current) => (current + 1) % selectedWork.length);
+  };
+
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
       <div className={styles.grid} aria-hidden="true" />
-      
+
       <div className={`page-container ${styles.heroInner}`}>
         <div className={styles.metaRow}>
           <p className={styles.eyebrow}>
@@ -49,13 +55,9 @@ function Hero() {
             <p className={styles.introLine}>Hi, I’m Darin.</p>
 
             <h1 id="hero-title" className={styles.title}>
-              <span className={styles.titleLine}>
-                I build the
-              </span>
+              <span className={styles.titleLine}>I build the</span>
 
-              <span className={styles.titleLine}>
-                interface and the
-              </span>
+              <span className={styles.titleLine}>interface and the</span>
 
               <span className={`${styles.titleLine} ${styles.accentText}`}>
                 systems behind it.
@@ -68,7 +70,7 @@ function Hero() {
             </p>
 
             <a className={styles.heroLink} href="#work">
-              View selected 
+              View selected
               <span aria-hidden="true">↘</span>
             </a>
           </div>
@@ -81,8 +83,8 @@ function Hero() {
 
             <p className={styles.noteText}>
               I like getting close to the whole product—how the interface
-              feels, how the logic behaves, how the user thinks, how the data moves, and whether
-              the result is actually useful.
+              feels, how the logic behaves, how the user thinks, how the data
+              moves, and whether the result is actually useful.
             </p>
           </aside>
         </div>
@@ -100,14 +102,26 @@ function Hero() {
           <figure className={styles.workPreview}>
             <figcaption className={styles.previewHeader}>
               <span>Project preview</span>
-              <span>01 / 04</span>
+
+              <span className={styles.previewNav}>
+                <span>{currentProject.index} / 04</span>
+
+                <button
+                  type="button"
+                  className={styles.previewNext}
+                  onClick={nextProject}
+                  aria-label="Next project preview"
+                >
+                  →
+                </button>
+              </span>
             </figcaption>
 
             <div className={styles.previewViewport}>
               <img
                 className={styles.previewImage}
-                src={preview}
-                alt="Map of Pi commerce platform preview"
+                src={currentProject.image}
+                alt={`${currentProject.title} project preview`}
               />
             </div>
           </figure>
@@ -121,10 +135,12 @@ function Hero() {
             <ol className={styles.workList}>
               {selectedWork.map((project, projectIndex) => (
                 <li
-                  onMouseEnter={() => setPreview(project.image)}
-                  onMouseLeave={() => setPreview("/mop3.png")}
+                  onMouseEnter={() => setActiveProject(projectIndex)}
+                  onMouseLeave={() => setActiveProject(0)}
                   className={`${styles.workItem} ${
-                    projectIndex === 0 ? styles.workItemActive : ""
+                    projectIndex === activeProject
+                      ? styles.workItemActive
+                      : ""
                   }`}
                   key={project.title}
                 >
