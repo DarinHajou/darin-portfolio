@@ -1,5 +1,5 @@
 import styles from "./Bosant.module.css";
-
+import { Link } from "react-router-dom";
 function Bosant() {
   return (
     <section
@@ -8,10 +8,16 @@ function Bosant() {
       aria-labelledby="bosant-title"
     >
       <div className={`page-container ${styles.inner}`}>
+        <div className={styles.meta}>
+          <Link to={"/"}>
+          <p className="label"> ← Back to work</p>
+          </Link>
+          <p className={styles.workStatus}>Selected Work: 04 / 04</p>
+        </div>
         {/* HEADER */}
         <header className={styles.header}>
           <div className={styles.meta}>
-            <p>04 / Selected work</p>
+            {/* <p>04 / Selected work</p> */}
             <p className={styles.status}>Draft concept / In development</p>
           </div>
 
@@ -171,6 +177,11 @@ function Bosant() {
             React / JavaScript / CSS / Shopify / Liquid
           </p>
         </footer>
+         <div className={styles.browseSection}>
+            <Link to="/Projects/reset-with-context" className={styles.browseProjects}>
+              <p className={styles.previousLabel}>← Previous project</p>
+            </Link>
+        </div>
       </div>
     </section>
   );
