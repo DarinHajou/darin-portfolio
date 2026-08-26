@@ -65,7 +65,7 @@ function Hero() {
             </h1>
 
             <p className={styles.summary}>
-              Frontend-focused full-stack developer building polished interfaces
+              Full-stack developer building polished interfaces
               and the services, payments, and data flows behind them.
             </p>
 
