@@ -1,12 +1,21 @@
 .section {
-  padding-block: clamp(4rem, 7vw, 8rem);
-
+  padding-block: clamp(5rem, 8vw, 9rem);
   border-bottom: 1px solid var(--color-border-strong);
 }
 
 .inner {
   display: grid;
-  gap: var(--space-8);
+}
+
+/* Section introduction */
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border-strong);
 }
 
 .title {
@@ -16,63 +25,66 @@
   letter-spacing: -0.025em;
 }
 
-/* Main personal module */
-
-.card {
-  display: grid;
-  gap: var(--space-12);
-
-  padding: clamp(2rem, 5vw, 5rem);
-
-  background: var(--color-surface);
-  border: 1px solid var(--color-border-strong);
-  border-radius: var(--radius-md);
+.marker {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
 }
 
-/* Narrative */
+/* Main editorial spread */
+
+.content {
+  display: grid;
+  gap: var(--space-12);
+  padding-block: clamp(3rem, 6vw, 6rem);
+  border-bottom: 1px solid var(--color-border);
+}
 
 .story {
   display: grid;
-  gap: var(--space-8);
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  text-align: left;
 }
 
 .lead {
-  max-width: 25ch;
-
-  font-size: clamp(1.75rem, 3vw, 3rem);
+  max-width: 22ch;
+  margin: 0;
+  font-size: clamp(2rem, 3.5vw, 3.75rem);
   font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -0.04em;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  color: var(--color-text-primary);
 }
 
 .copy {
   display: grid;
-  gap: var(--space-5, 1.25rem);
-
-  max-width: 42rem;
-
+  gap: var(--space-6);
+  max-width: 39rem;
   font-size: var(--text-base);
   line-height: 1.8;
   color: var(--color-text-secondary);
 }
 
-/* Small personal details */
+.copy p {
+  margin: 0;
+}
+
+/* Supporting details */
 
 .details {
   display: grid;
-  gap: 0;
-
   align-self: start;
-
   border-top: 1px solid var(--color-border);
+  text-align: left;
 }
 
 .detail {
   display: grid;
-  gap: var(--space-2);
-
-  padding-block: var(--space-5, 1.25rem);
-
+  gap: var(--space-3);
+  padding-block: var(--space-6);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -80,38 +92,36 @@
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   line-height: 1.4;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-accent-muted);
 }
 
 .detail p {
-  max-width: 25rem;
-
+  max-width: 24rem;
+  margin: 0;
   font-size: var(--text-base);
   line-height: 1.6;
   color: var(--color-text-primary);
 }
 
-/* Bottom */
+/* Bottom action */
 
 .footer {
-  padding-top: var(--space-4);
+  display: flex;
+  justify-content: flex-start;
+  padding-top: var(--space-6);
 }
 
 .resumeLink {
   display: inline-flex;
   align-items: center;
   gap: var(--space-3);
-
   width: fit-content;
   padding-bottom: var(--space-2);
-
   font-size: var(--text-sm);
   font-weight: 500;
-
   border-bottom: 1px solid var(--color-accent-muted);
-
   transition:
     color var(--duration-fast) var(--ease-standard),
     border-color var(--duration-fast) var(--ease-standard);
@@ -119,7 +129,6 @@
 
 .resumeLink span {
   color: var(--color-accent);
-
   transition: transform var(--duration-fast) var(--ease-standard);
 }
 
@@ -137,35 +146,38 @@
   outline-offset: 0.4rem;
 }
 
-/* Desktop */
-
 @media (min-width: 768px) {
-  .card {
-    grid-template-columns: minmax(0, 1.7fr) minmax(16rem, 0.7fr);
-    column-gap: clamp(3rem, 7vw, 7rem);
-    row-gap: var(--space-16);
+  .content {
+    grid-template-columns: minmax(0, 1.65fr) minmax(16rem, 0.7fr);
+    column-gap: clamp(4rem, 8vw, 8rem);
     align-items: start;
   }
 
-  .story {
-    grid-column: 1;
-  }
-
   .details {
-    grid-column: 2;
+    padding-left: clamp(2rem, 4vw, 4rem);
+    border-top: 0;
+    border-left: 1px solid var(--color-border);
   }
 
-  .footer {
-    grid-column: 1 / -1;
-
-    padding-top: var(--space-8);
-
-    border-top: 1px solid var(--color-border);
+  .detail:first-child {
+    padding-top: 0;
   }
 }
 
 @media (max-width: 767px) {
-  .card {
-    padding: var(--space-8) var(--space-6);
+  .section {
+    padding-block: var(--space-16);
+  }
+
+  .header {
+    align-items: flex-end;
+  }
+
+  .lead {
+    max-width: 24ch;
+  }
+
+  .marker {
+    display: none;
   }
 }

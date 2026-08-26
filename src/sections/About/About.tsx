@@ -8,35 +8,40 @@ function About() {
       aria-labelledby="about-title"
     >
       <div className={`page-container ${styles.inner}`}>
-        <h2 id="about-title" className={styles.title}>
-          About
-        </h2>
+        <header className={styles.header}>
+          <h2 id="about-title" className={styles.title}>
+            About
+          </h2>
 
-        <div className={styles.card}>
+          <span className={styles.marker}>A little context</span>
+        </header>
+
+        <div className={styles.content}>
           <div className={styles.story}>
             <p className={styles.lead}>
-              I’ve always been technical and naturally drawn to solving
-              problems. Development eventually became the place where that
-              clicked into something useful.
+              I’ve always been drawn to understanding how things work—technology,
+              people and systems. Development became the place where those
+              interests could turn into something useful.
             </p>
 
             <div className={styles.copy}>
               <p>
-                Development eventually gave that instinct a proper outlet: building systems, shaping products, and turning ideas into something real.
+                My background is broader than development alone. I’ve studied
+                psychology, philosophy, history and communication, worked closely
+                with customers and businesses, and spent years around technology.
               </p>
 
               <p>
-                I also come from a fairly broad background. I’ve studied
-                psychology, philosophy, history and communication, worked with
-                customers and business, and spent years around technology. That
-                mix affects how I approach products: technically, visually,
-                commercially, and from the user’s point of view.
+                That mix shapes how I approach products: technically, visually,
+                commercially and from the user’s point of view. I care about how
+                an interface feels, but also whether the system behind it works
+                and whether the result solves a real problem.
               </p>
 
               <p>
-                Outside work, most of my time goes to my family, training,
-                walking, camping and reading. I’m naturally curious, so I tend
-                to be learning something whether I’m working or not.
+                Outside work, most of my time goes to family, training, walking,
+                camping and reading. I’m naturally curious, so I’m usually
+                learning something whether I’m working or not.
               </p>
             </div>
           </div>
@@ -49,9 +54,7 @@ function About() {
 
             <div className={styles.detail}>
               <span>Currently</span>
-              <p>
-                Building products and exploring what AI makes possible.
-              </p>
+              <p>Building Map of Pi and exploring better ways to work with AI.</p>
             </div>
 
             <div className={styles.detail}>
@@ -59,14 +62,14 @@ function About() {
               <p>Family, training, walking, camping and reading.</p>
             </div>
           </aside>
-
-          <div className={styles.footer}>
-            <a className={styles.resumeLink} href="/resume.pdf">
-              View résumé
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
         </div>
+
+        <footer className={styles.footer}>
+          <a className={styles.resumeLink} href="/cv_darin-v0.3.pdf">
+            View résumé
+            <span aria-hidden="true">↗</span>
+          </a>
+        </footer>
       </div>
     </section>
   );
