@@ -66,6 +66,7 @@ function About() {
 
         <footer className={styles.footer}>
           <a className={styles.resumeLink} href="/cv_darin-v0.3.pdf">
+          
             View résumé
             <span aria-hidden="true">↗</span>
           </a>

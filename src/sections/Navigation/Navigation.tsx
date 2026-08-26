@@ -4,7 +4,7 @@ import styles from "./Navigation.module.css";
 const navigationLinks = [
   { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
-  { label: "Résumé", href: "/resume.pdf" },
+  { label: "Résumé", href: "" },
   { label: "Contact", href: "#contact", isContact: true },
 ];
 
@@ -56,7 +56,7 @@ function Navigation() {
                   className={`${styles.navLink} ${
                     link.isContact ? styles.contactLink : ""
                   }`}
-                  href={link.href}
+                  href={"/cv_darin-v0.3.pdf"}
                   onClick={closeMenu}
                 >
                   {link.label}
