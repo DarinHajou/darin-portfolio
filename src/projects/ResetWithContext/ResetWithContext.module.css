@@ -327,9 +327,17 @@
 
 .footer {
   display: grid;
-  gap: var(--space-8);
+  gap: var(--space-12);
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border-strong);
 }
 
+.descriptionBlock {
+  display: grid;
+  gap: var(--space-6)
+}
 
 .positioning {
   font-size: var(--text-lg);
@@ -337,6 +345,7 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   text-wrap: balance;
+  
 }
 
  .supportLine {
@@ -354,11 +363,13 @@
   color: var(--color-text-muted);
 }
 .projectLinks {
-  display: flex;
-  /* align-items: flex-start; */
-  justify-content: space-between;
-  border-top: 1px solid var(--color-border);
-  padding-top: var(--space-12);
+  display: grid;
+  gap: var(--space-8);
+  place-items: center;
+  /* border-top: 1px solid var(--color-border); */
+  /* border-bottom: 1px solid var(--color-border); */
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
 }
 
 .projectLinks a {
@@ -372,6 +383,7 @@
   font-weight: 500;
 
   border-bottom: 1px solid var(--color-border-strong);
+
   transition:
     color var(--duration-fast) var(--ease-standard),
     border-color var(--duration-fast) var(--ease-standard);
@@ -400,8 +412,20 @@
   line-height: 1.8;
   color: var(--color-text-muted);
 }
-
-
+.browseSection {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.status,
+.browseProjects  {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
 @media (min-width: 768px) {
   .intro {
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -441,11 +465,6 @@
 
   .footer {
     display: grid;
-    justify-content: center;
-    align-items: center;
-
-    /* column-gap: var(--space-6); */
-    /* align-items: start; */
   }
 
   .positioning {
@@ -509,6 +528,8 @@
   }
   
   .projectLinks {
+     justify-content: space-between;
+    display: flex;
     grid-column: 9 / -1;
   }
   .technology {
