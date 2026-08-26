@@ -1,5 +1,5 @@
 import styles from "./Whispr.module.css";
-
+import { Link } from "react-router-dom";
 const cravings = [
   { name: "Comfort", descriptor: "Warm / steady", className: styles.comfort },
   { name: "Escape", descriptor: "Drifting / outward", className: styles.escape },
@@ -19,9 +19,14 @@ function Whisper() {
       <div className={styles.backgroundGrid} aria-hidden="true" />
 
       <div className={`page-container ${styles.inner}`}>
+        <div className={styles.meta}>
+            <Link to={"/"}>
+            <p className="label"> ← Back to work</p>
+            </Link>
+            <p className={styles.status}>Selected Work: 03 / 04</p>
+          </div>
         <header className={styles.header}>
           <div className={styles.meta}>
-            <p>03 / Selected work</p>
             <p className={styles.status}>Independent build</p>
           </div>
 
@@ -248,20 +253,6 @@ function Whisper() {
           </div>
           <div>
           <div className={styles.curationSection}>
-            {/* <figure className={styles.refineFigure}>
-              <div className={styles.refineFrame}>
-                <img
-                  className={styles.refineImage}
-                  src="/refine.png"
-                  alt="Whispr controls for shifting the recommendation toward lighter, darker, newer, more obscure, or more surprising films"
-                />
-              </div>
-              <figcaption className={styles.visualCaption}>
-                <span>Directional refinement</span>
-                <span>04 / Shift the interpretation</span>
-              </figcaption>
-            </figure> */}
-
               <div className={styles.chatCopy}>
                 <p className={styles.sectionLabel}>05 / Chat, with context</p>
                 <h3 className={styles.subheading}>
@@ -306,10 +297,16 @@ function Whisper() {
               </p>
             </div>
           </div>
-          <p className={styles.technology}>
-            React / TypeScript / OpenAI / TMDB / Framer Motion
-          </p>
+          
         </footer>
+          <div className={styles.browseSection}>
+            <Link to="/Projects/reset-with-context" className={styles.browseProjects}>
+              <p className={styles.previousLabel}>← Previous project</p>
+            </Link>
+            <Link to="/Projects/bosant" className={styles.browseProjects}>
+              <p className={styles.nextLabel}>Next project →</p>
+            </Link>
+          </div>
       </div>
     </section>
   );

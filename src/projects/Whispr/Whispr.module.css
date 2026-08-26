@@ -92,7 +92,6 @@
   color: var(--color-accent);
 }
 
-
 .visualCaption {
   display: flex;
   justify-content: space-between;
@@ -309,13 +308,6 @@
   }
 }
 
-@media (max-width: 767px) {
-  .welcomeFrame {
-    min-height: 28rem;
-    padding: var(--space-4);
-  }
-}
-
 /* Emotional input */
 
 .emotionalInput {
@@ -360,6 +352,7 @@
   background: var(--color-bg-deep);
   border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-sm);
+  
 }
 
 .resultsFrame::after,
@@ -387,6 +380,23 @@
   object-fit: cover;
 }
 
+
+
+.browseSection {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.status,
+.browseProjects  {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
 @media (min-width: 768px) {
   .emotionalInput {
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -409,6 +419,13 @@
 
   .intensityFigure {
     grid-column: 7 / span 5;
+  }
+  .browseProjects {
+    display: block;
+    justify-content: space-between;
+    align-items: end;
+    grid-column: 11 / span 2;
+    
   }
 }
 @media (min-width: 1100px) {
@@ -753,13 +770,14 @@
 
 @media (max-width: 767px) {
   .refineFrame {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 16 / 16;
     
   }
   
 
   .refineImage {
     object-position: center 78%;
+   
   }
 }
 
@@ -775,6 +793,8 @@
 .systemNotes {
   display: grid;
   gap: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-8);
 }
 
 .systemNotes > div {
