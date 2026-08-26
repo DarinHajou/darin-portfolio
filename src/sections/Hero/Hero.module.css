@@ -366,7 +366,6 @@
 .workItemLink {
   display: grid;
   grid-template-columns: 2.5rem minmax(0, 1fr);
-  gap: var(--space-3);
   align-items: center;
 
   width: 100%;
