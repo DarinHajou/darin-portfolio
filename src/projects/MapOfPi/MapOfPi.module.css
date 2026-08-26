@@ -118,7 +118,13 @@
   min-width: 19rem;
   margin: 0;
 }
-
+.walkthrough,
+.testimony {
+  width: min(72vw, 17rem);
+  min-width: 0;
+  margin-inline: auto;
+  justify-self: center;
+}
 .walkthroughFrame {
   overflow: hidden;
 
@@ -155,7 +161,7 @@
   color: var(--color-text-muted);
 }
 .testimony {
-  width: 100%;
+  /* width: 100%; */
   min-width: 19rem;
   margin: 0;
 }
@@ -275,16 +281,19 @@
 }
 
 .contributionsSection {
-  grid-template-rows: max-content 1fr;
-
+  display: grid;
+  gap: var(--space-8);
 }
 
 .contributionsHeader {
-  display: flex;
-  margin-bottom: var(--space-12);
+  display: grid;
+  gap: var(--space-3);
+
+  margin: auto;
 }
 
 .contributionsHeader > p:last-child {
+  max-width: 36rem;
   font-size: var(--text-base);
   line-height: 1.6;
   color: var(--color-text-secondary);
@@ -292,41 +301,43 @@
 
 .contributionList {
   display: grid;
-  text-align: left;
   margin: 0;
   padding: 0;
-
   list-style: none;
-
+  text-align: left;
+  border-top: 1px solid var(--color-border);
 }
 
 .contributionList li {
   display: grid;
-  grid-template-columns: 2.5rem minmax(0, 1fr);
+  grid-template-columns: 2rem minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-3);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .contributionList span {
+  padding-top: 0.15rem;
   font-family: var(--font-mono);
   font-size: var(--text-xs);
+  line-height: 1.4;
   letter-spacing: 0.06em;
   color: var(--color-accent);
 }
 
 .contributionList p {
-  font-size: var(--text-md);
-  line-height: 1.4;
+  font-size: var(--text-base);
+  line-height: 1.5;
   color: var(--color-text-primary);
-  
 }
 
 .footer {
   display: grid;
   gap: var(--space-12);
-
-  padding-top: var(--space-8);
-  padding-bottom: var(--space-8);
-
-  border-top: 1px solid var(--color-border-strong);
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+  border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border-strong);
 }
 
@@ -347,7 +358,7 @@
 
 .projectLinks {
   display: flex;
-  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .projectLinks a {
@@ -355,7 +366,7 @@
   align-items: center;
   gap: var(--space-2);
 
-  /* padding-bottom: var(--space-2); */
+  padding-bottom: var(--space-2);
 
   font-size: var(--text-sm);
   font-weight: 500;
