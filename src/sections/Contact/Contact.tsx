@@ -30,9 +30,7 @@ function Contact() {
 
             <div className={styles.copy}>
               <p>
-                If one of my projects interests you, ask me for a personal
-                walkthrough. If you’re building something yourself and think I
-                could contribute, tell me about it.
+                Interested in one of the projects? I’d be happy to walk you through the thinking and the work behind it.
               </p>
 
               <p>
@@ -57,12 +55,13 @@ function Contact() {
 
         <footer className={styles.footer}>
           <nav className={styles.links} aria-label="Social links">
-            <a href="YOUR_LINKEDIN" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/darin-hajou/" target="_blank" rel="noreferrer">
               LinkedIn <span aria-hidden="true">↗</span>
             </a>
 
-            <a href="YOUR_GITHUB" target="_blank" rel="noreferrer">
+            <a href="https://github.com/DarinHajou" target="_blank" rel="noreferrer">
               GitHub <span aria-hidden="true">↗</span>
+              
             </a>
           </nav>
 
