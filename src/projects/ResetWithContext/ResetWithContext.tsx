@@ -77,7 +77,7 @@ function ResetWithContext() {
           <div className={styles.primaryFrame}>
             <img
               className={styles.primaryImage}
-              src="/RWC-button.png"
+              src="/rwc-button.png"
               alt="Reset with Context integrated into ChatGPT with a Create handoff button beside the message composer"
             />
           </div>
