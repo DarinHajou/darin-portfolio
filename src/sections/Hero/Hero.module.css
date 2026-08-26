@@ -18,7 +18,7 @@
 
   pointer-events: none;
 
-  opacity: 0.98;
+  opacity: 0.78;
 
   background-image:
     linear-gradient(var(--color-grid) 1.3px, transparent 1.3px),
