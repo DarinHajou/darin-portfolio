@@ -35,7 +35,7 @@ function Whisper() {
               <p className={styles.projectType}>Emotion-led film curation</p>
 
               <h2 id="whispr-title" className={styles.title}>
-                Whispr
+                <a href="https://whisprmovie.vercel.app/">Whispr</a>
               </h2>
 
               <p className={styles.summary}>
