@@ -46,7 +46,7 @@ function MapOfPi() {
               <div className={styles.introCore}>
                 <div className={styles.titleRow}>
                   <h2 id="map-of-pi-title" className={styles.title}>
-                    Map of Pi
+                   <a href="https://mapofpi.pinet.com/">Map Of Pi<span aria-hidden="true"></span></a>
                   </h2>
 
                   <img
