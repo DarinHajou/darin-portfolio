@@ -1,4 +1,5 @@
 import styles from "./ResetWithContext.module.css";
+import { Link } from "react-router-dom";
 
 const currentBuild = [
   {
@@ -35,8 +36,10 @@ function ResetWithContext() {
       <div className={`page-container ${styles.inner}`}>
         <header className={styles.header}>
           <div className={styles.meta}>
-            <p> 02 / Selected work</p>
-            <p className={styles.status}>Active prototype</p>
+            <Link to={"/"}>
+            <p className="label"> ← Back to work</p>
+            </Link>
+            <p className={styles.status}>Selected Work: 02 / 04</p>
           </div>
 
           <div className={styles.intro}>
@@ -133,13 +136,15 @@ function ResetWithContext() {
             ))}
           </ol>
         </div>
+          <div className={styles.descriptionBlock}>
+            <p className={styles.positioning}>
+              Git tracks code history. Reset with Context tracks AI-work
+              reasoning history.
+            </p>
+            <p className={styles.supportLine}>A continuity layer for decisions, corrections, handoffs, and source-linked project context.</p>
+          </div>
 
         <footer className={styles.footer}>
-          <p className={styles.positioning}>
-            Git tracks code history. Reset with Context tracks AI-work
-            reasoning history.
-          </p>
-          <p className={styles.supportLine}>A continuity layer for decisions, corrections, handoffs, and source-linked project context.</p>
          
           <div className={styles.projectLinks}>
              <p className={styles.technology}>
@@ -152,6 +157,14 @@ function ResetWithContext() {
             </a>
           </div>
         </footer>
+        <div className={styles.browseSection}>
+          <Link to="/Projects/map-of-pi" className={styles.browseProjects}>
+            <p className={styles.previousLabel}>← Previous project</p>
+          </Link>
+          <Link to="/Projects/whispr" className={styles.browseProjects}>
+            <p className={styles.nextLabel}>Next project →</p>
+          </Link>
+        </div>
       </div>
     </section>
   );
