@@ -13,7 +13,7 @@ const selectedWork = [
     index: "02",
     title: "Reset with Context",
     link: "/Projects/reset-with-context",
-    image: "/rwc-handoff.png",
+    image: "/RWC-handoff.png",
   },
   {
     index: "03",
